@@ -1,0 +1,27 @@
+{
+"visits":[
+{
+    "numbers":"1.",
+"title":"View Listing",
+"content":"Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+},
+{
+    "numbers":"2.",
+"title":"Contac Us",
+"content":"Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+}
+,
+{
+    "numbers":"3.",
+"title":"Request a Visit",
+"content":"Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+},
+{
+    "numbers":"4.",
+"title":"Buy The House",
+"content":"Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+}
+
+]
+
+}
