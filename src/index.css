@@ -6,6 +6,11 @@
     text-decoration: none;
     cursor: pointer;
 }
+.container{
+    margin: 0 auto;
+    width: 90%;
+
+}
 
 .desktopPages {
     display: flex;
@@ -20,15 +25,20 @@
     z-index: 2;
     background-color: #FAFAFA;
 }
-
-header {
+ 
+.headers {
   
     display: flex;
     gap: 35px;
     align-items: center;
 }
+header{
+    display: flex;
+    gap: 35px;
+    align-items: center;  
+}
 
-button {
+.headers >button {
     display: flex;
     padding: 4px 24px;
     justify-content: center;
@@ -41,32 +51,29 @@ button {
     color: #FFF;
     font: normal 600 12px/24px Nunito;
 }
-
-header .activ {
-    color: #333;
+.headers>i{
+    display: none;
 }
+ 
 
 .heroHome {
     margin-top: 100px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+   
     padding: 80px 72px;
     gap: 80px;
     width: 100%;
     box-sizing: border-box;
 }
 .leftHero{
+    width: 50%;
     display: flex;
     flex-direction: column;
-    gap: 40px;
-}
-.leftHero, .imgHero {
+    align-items: flex-start;
+    gap: 20px;
     flex: 1;
-    max-width: 50%;
-    box-sizing: border-box;
 }
-
 .leftHero > h2 {
     color: #333;
     font: normal 700 56px/72px Nunito;
@@ -76,12 +83,16 @@ header .activ {
     color: #666;
     font: normal 400 16px/32px Nunito;
 }
-
+.imgHero{
+    width: 50%;
+    flex: 1;
+}
 .imgHero > img {
     width: 100%;
-    height: 558px;
+    height: 100%;
     object-fit: contain;
 }
+
 .leftHero >.form{
     width: 100%;
     height: 55px;
@@ -112,6 +123,19 @@ background: #FAFAFA;
     color: #dad5d5;
     padding-left: 16px;
 }
+.form>button{
+    width: 50px;
+    height: 40px;
+    display: flex;
+    padding: 8px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 80px;
+background:  #3854B5;
+border: none;   
+}  
+   
 .number{
     display: flex;
     gap: 40px;
@@ -125,7 +149,7 @@ background: #FAFAFA;
     color:  #666;
     font: normal 400 16px/32px Nunito;
 
-}
+} 
 .listTured{
     display: flex;
     align-items: center;
@@ -147,9 +171,10 @@ width: 50%;
 font: normal 400 16px/32px Nunito;
 
 }
+
 .houseStreet{
     width: 100%;
-    height: 500px;
+    /* height: 500px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -170,6 +195,8 @@ font: normal 400 16px/32px Nunito;
 
 .cols > button {
     position: absolute;
+    width: 80px;
+    height: 30px;
     top: 16px;
     left: 16px;
     overflow: hidden;
@@ -180,7 +207,6 @@ font: normal 400 16px/32px Nunito;
     padding: 4px 24px;
     justify-content: center;
     align-items: center;
-
     gap: 8px;
     transition: opacity 0.3s ease; 
     
@@ -188,6 +214,8 @@ font: normal 400 16px/32px Nunito;
 
 .cols:hover > button {
     opacity: 1;
+    color: #FFF;
+    border: none;
 }
 .cols>h4{
     color:  #333;
@@ -202,6 +230,10 @@ gap: 8px;
     color:  #666;
     font: normal 400 16px/32px Nunito;
 }
+
+/* 
+
+/* 
 .lorem{
     display: flex;
     align-items: center;
@@ -301,10 +333,10 @@ flex-direction: column;
 display: flex;
 flex-direction: column;
 gap: 10px;
-}
+}                                       B
 .step{
 display: flex;
-align-items: center;
+align-items: center;                   U
 padding: 80px 72px;
 width: 100%;
 gap: 80px;
@@ -313,7 +345,7 @@ gap: 80px;
 color:  #333;
 width: 50%;
 font: normal 700 40px/56px Nunito;
-
+                                         H
 }
 .step>p{
 color: #666;
@@ -325,7 +357,7 @@ display: flex;
 width: 100%;
 padding: 80px 72px;
 gap: 20px;
-}
+}                                          I
 .data{
 width: 25%;
 }
@@ -333,14 +365,14 @@ width: 25%;
 width: 54px;
 height: 54px;
 border-radius: 50%;
-display: flex;
+display: flex;                           S
 align-items: center;
 justify-content: center;
 color: #FFF;
 font: normal 700 24px/40px Nunito;
 background:  #222430;
 }
-.data>h4{
+.data>h4{                                       S
 color:  #333;
 font: normal 700 32px/48px Nunito;
 
@@ -349,7 +381,7 @@ font: normal 700 32px/48px Nunito;
 color:  #666;
 font: normal 400 16px/32px Nunito;
 width: 90%;
-}
+}                                             E
 .contacts{
     display: flex;
     align-items: center;
@@ -358,7 +390,7 @@ width: 90%;
 .contacts>span{
 color: #666;
 font: normal 400 14px/24px Nunito;
-
+                                             N
 }
 .conts{
     display: flex;
@@ -370,7 +402,7 @@ font: normal 400 14px/24px Nunito;
 }
 .links>form>input{
     border-radius: 16px;
-    border: 1px solid  #666;   
+    border: 1px solid  #666;                   N
 width: 192px;
 height: 40px;
 text-indent: 10px;
@@ -378,13 +410,13 @@ text-indent: 10px;
 .links>form{
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 15px;                                     I
 }
 .links>form>input:last-of-type{
     background-color: #3854B5;
     color: #FFF;
 }
-
+                                               A
 .choose{
     width: 100%;
     display: flex;
@@ -395,20 +427,20 @@ text-indent: 10px;
 }
 .chooseLeft{
     width: 50%;
-    display: flex;
+    display: flex;                                C
     justify-content: center;
     flex-direction: column;
     gap: 40px;
 }
 .dolor{
-    display: flex;
+    display: flex;                              M
     flex-direction: column;
     gap: 16px;
 }.dolor>h3{
     color: #333;
     font: normal 700 40px/56px Nunito;
 }
-.dolor>p{
+.dolor>p{                                        I
     color:  #666;
 font: normal 400 26px/32px Nunito;
 
@@ -416,7 +448,7 @@ font: normal 400 26px/32px Nunito;
 .box{
  padding: 10px;
     width: 100%;
-    display: flex;
+    display: flex;                            Y
     gap: 12px;
   
 }
@@ -424,13 +456,13 @@ font: normal 400 26px/32px Nunito;
     transition: 0.3s ease-in-out;
     border-radius: 16px;
 background:  #FFF;
-box-shadow: 0px 80px 120px 0px rgba(34, 34, 34, 0.1);
+box-shadow: 0px 80px 120px 0px rgba(34, 34, 34, 0.1);             I
 }
 .chooseRight>img{
     object-fit: contain;
 }
 .title>h4{
-    color: #333;
+    color: #333;                         N            LUTFENNN
     font: normal 700 32px/48px Nunito;
 
 }
@@ -529,4 +561,167 @@ background-color: #D9D9D9;
     object-fit: contain;
     display: flex;
     gap: 16px;
+  }
+
+ */ 
+
+
+  @media (max-width: 960px) {
+header{
+    display: none;
+}
+.headers>i{
+ display: block;
+}
+   .heroHome{
+    width: 100%;
+display: flex;
+flex-direction: column;
+   }
+   .leftHero{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+   }
+   .number{
+    display: flex;
+    gap: 60px;
+}
+.number >.row>h4{
+    color:  #333;
+    font: normal 700 32px/48px Nunito;
+
+}
+.number >.row>span{
+    color:  #666;
+    font: normal 400 16px/32px Nunito;
+
+}
+.imgHero{
+    width: 100%;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+    display: flex;
+height: 100vh;
+  
+}
+.imgHero > img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.houseStreet{
+    width: 100%;
+    flex-wrap: wrap;
+}
+.cols{
+    width: 50%;
+}
+
+
+  }
+
+
+
+
+
+
+  @media (max-width:400px){
+    .heroHome{
+        width: 100%;
+        display: flex;
+  
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+.leftHero{
+    width: 100%;
+ display: flex;
+ flex-direction: column;
+
+ justify-content: center;
+    
+}
+.leftHero>h2{
+width: 150%;
+color: Text-Title, #333;
+font: normal 700 32px/48px Nunito;
+}
+.leftHero>p{
+    width: 200%;
+    color:  #666;
+    font: normal 400 16px/32px Nunito;
+
+}
+.leftHero >.form{
+    width: 189%;
+    padding: 8px;
+    display: flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+align-self: stretch;
+}
+
+.leftHero>.form>form{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+   
+}
+.leftHero>.form>form>input{
+    height:24px ;
+    width: max-content;
+    border: 1px solid #FAFAFA;
+    background: #FAFAFA;
+    outline-width: 0;
+}
+.form>form>i{
+    color: #dad5d5;
+    padding-left: 10px;
+}
+.number{
+    display: flex;
+   
+    width:100%;
+    gap: 80px;
+}
+.imgHero{
+    width: 100%;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+    display: flex;
+height: 100vh;
+  
+}
+.imgHero > img {
+
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+
+.listTured{
+ display: flex;
+ flex-direction: column;
+width: 100%;
+gap: 40px;
+  
+}
+.listTured>h3{
+    width: 150%;
+}
+.listTured>p{
+    width: 150%;
+
+}
+
+
   }

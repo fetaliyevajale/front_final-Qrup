@@ -14,7 +14,7 @@ import Box from "./Box";
 import Movie from "./Movie"
 export default function Home() {
   return (
-    <>
+    <div className="container">
 <Hero/>
 <Section/>
 <Lorem/>
@@ -27,6 +27,6 @@ export default function Home() {
 <Box/>
 <Movie/>
 <Fotter/>
-    </>
+    </div>
   );
 }

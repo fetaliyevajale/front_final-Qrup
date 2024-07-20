@@ -20,15 +20,21 @@ function App() {
    <img src="./Logo.png" alt="" />
    </div>
 
+<div className="headers">
 <header>
-  <NavLink style={{color:'black'}}  to="/">Home</NavLink>
+  <NavLink  style={{color:'black'}}  to="/">Home</NavLink>
   <NavLink style={{color:'black'}} to="/listing">Listing</NavLink>
   <NavLink style={{color:'black'}} to="/services">Services</NavLink>
   <NavLink style={{color:'black'}} to="/about">About</NavLink>
   <NavLink style={{color:'black'}} to="/contact">Contact Us</NavLink>
- 
- <button>Get a Quote</button>
+  
 </header>
+<i className="fa-solid fa-bars"></i>
+<button>Get a Quote</button>
+
+</div>
+
+ 
 
 </div>
 

@@ -28,19 +28,19 @@ export default function Footer() {
         <div className="links">
           <h6>Get in Touch</h6>
           <div className="conts">
-          <i class="fa-solid fa-location-dot"></i>
+          <i className="fa-solid fa-location-dot"></i>
 <span>123 Anywhere Street, Any <br />City, 12345 ST, Indonesia
 </span>
           </div>
 
 <div className="contacts">
-<i class="fa-solid fa-phone"></i>
+<i className="fa-solid fa-phone"></i>
 <span>+123 456 7890</span>
 </div>
 
 
 <div className="contacts">
-<i class="fa-solid fa-envelope"></i>
+<i className="fa-solid fa-envelope"></i>
 <span>hello@dhalem.com</span>
 </div>
         </div>

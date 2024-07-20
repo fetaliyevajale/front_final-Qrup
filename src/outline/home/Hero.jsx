@@ -2,10 +2,10 @@ import React from 'react'
 
 export default function Hero() {
   return (
-    <div>
+    <>
 
 
-<div className="heroHome">
+<div className="heroHome ">
         <div className="leftHero">
           <h2>Bring Your Family's Happiness to Your Dream House</h2>
           <p>
@@ -66,6 +66,6 @@ export default function Hero() {
 
 
 
-    </div>
+    </>
   )
 }
