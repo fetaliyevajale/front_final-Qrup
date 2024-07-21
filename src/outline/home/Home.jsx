@@ -5,11 +5,7 @@ import Hero from "./Hero";
 import Section from "./Section";
 import Vision from "./Vision";
 import Visits from "./Visits";
-import Lorem from "./Lorem";
-import Stemp from "./Stemp";
 import Choose from "./Choose";
-import Lorems from "./Lorems";
-import Says from "./Says";
 import Box from "./Box";
 import Movie from "./Movie"
 export default function Home() {
@@ -17,13 +13,33 @@ export default function Home() {
     <div className="container">
 <Hero/>
 <Section/>
-<Lorem/>
+<div className="lorem">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <button><Link style={{color:'black'}}  to="/listing">See More</Link></button>
+      </div>
 <Vision/>
-<Stemp/>
+<div className="step">
+<h3>Easy Step to Buy Property <br /> on Dhalem Real Estate</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br /> tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
 <Visits/>
-<Lorems/>
+<div className="lorem">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <button><Link style={{color:'black'}}  to="/listing">See Our FAQ</Link></button>
+      </div>
+
 <Choose/>
-<Says/>
+<div className="step">
+<h3>What Says from Our Happy <br /> Customers</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br /> tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+
 <Box/>
 <Movie/>
 <Fotter/>

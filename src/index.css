@@ -1,14 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    cursor: pointer;
+  font-family: Nunito;
 }
 .container{
     margin: 0 auto;
     width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
 }
 
@@ -174,10 +181,9 @@ font: normal 400 16px/32px Nunito;
 
 .houseStreet{
     width: 100%;
-    /* height: 500px; */
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 16px;
     padding: 30px 72px;
     
@@ -191,6 +197,7 @@ font: normal 400 16px/32px Nunito;
 .cols > img {
     border-radius: 16px;
     object-fit: contain;
+    width: 100%;
 }
 
 .cols > button {
@@ -231,9 +238,50 @@ gap: 8px;
     font: normal 400 16px/32px Nunito;
 }
 
-/* 
 
-/* 
+.vision{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    padding: 80px 72px;
+    gap: 80px;
+    background: var(--Secondary-Light-Gray, #FAFAFA);
+}
+.missions,.visions{
+width:100% ;
+
+
+}
+.missions> .col{
+    width: 50%;
+display: flex;
+flex-direction: column;
+gap: 24px;
+}
+.visions>.col{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+gap: 24px;
+}
+.col>h3{
+    color: #333;
+width: 100%;
+font: normal 700 40px/56px Nunito;
+  
+}
+.col>p{
+    color:  #666;
+width: 150%;
+font: normal 400 16px/32px Nunito;
+
+}
+.col>img{
+    width: 150%;
+    object-fit: cover;
+}
 .lorem{
     display: flex;
     align-items: center;
@@ -260,50 +308,58 @@ color: #333;
 font:normal 600 16px/32px Nunito;
 
 }
-.vision {
+
+.step{
     display: flex;
-    background: #FAFAFA;
+    align-items: center;   
+    justify-content: space-between;                
     padding: 80px 72px;
-    align-items: flex-start;
-    justify-content: space-around;
     width: 100%;
-    height: auto; 
-    gap: 180px;
-  }
-  
-  .visions, .missions {
+    gap: 80px;
+    }
+    .step>h3{
+    color:  #333;
+    width: 100%;
+    font: normal 700 40px/56px Nunito;
+                                             
+    }
+    .step>p{
+        width: 100%;
+    color: #666;
+    font: normal 400 16px/32px Nunito;
+    
+    }
+
+.visitData{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 50%;
-    gap: 24px;
-  }
-  
-  .cols {
-    display: flex;
-    flex-direction: column; 
-    align-items: flex-start; 
-  }
-  
-  .visions .cols h3, .missions .cols h3 {
-    color: #333;
-    font: normal 500 40px/56px Nunito;
-  width: 250%;
-    margin-bottom: 10px; 
-  }
-  
-  .visions .cols img, .missions .cols img {
-    object-fit: contain;
-    margin-bottom: 10px; 
-  }
-  
-.visions .cols p, .missions .cols p {
-color:  #666;
-display: flex;
-width:290%;
-font: normal 400 16px/32px Nunito;
-margin-bottom: 10px; 
-  }
+    width: 100%;
+    padding: 80px 72px;
+    gap: 20px;
+    }                                          
+    .data{
+    width: 25%;
+    }
+    .data>.backGround{
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;                           
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font: normal 700 24px/40px Nunito;
+    background:  #222430;
+    }
+    .data>h4{                                       
+    color:  #333;
+    font: normal 700 32px/48px Nunito;
+    
+    }
+    .data>p{
+    color:  #666;
+    font: normal 400 16px/32px Nunito;
+    width: 90%;
+    }  
   
   
 footer{
@@ -329,59 +385,16 @@ display: flex;
 gap: 15px;
 flex-direction: column;
 }
+.link>h6{
+    color:  #333;
+    font: normal 700 16px/32px Nunito;
+    }
 .className{
 display: flex;
 flex-direction: column;
 gap: 10px;
-}                                       B
-.step{
-display: flex;
-align-items: center;                   U
-padding: 80px 72px;
-width: 100%;
-gap: 80px;
-}
-.step>h3{
-color:  #333;
-width: 50%;
-font: normal 700 40px/56px Nunito;
-                                         H
-}
-.step>p{
-color: #666;
-font: normal 400 16px/32px Nunito;
-
-}
-.visitData{
-display: flex;
-width: 100%;
-padding: 80px 72px;
-gap: 20px;
-}                                          I
-.data{
-width: 25%;
-}
-.data>.backGround{
-width: 54px;
-height: 54px;
-border-radius: 50%;
-display: flex;                           S
-align-items: center;
-justify-content: center;
-color: #FFF;
-font: normal 700 24px/40px Nunito;
-background:  #222430;
-}
-.data>h4{                                       S
-color:  #333;
-font: normal 700 32px/48px Nunito;
-
-}
-.data>p{
-color:  #666;
-font: normal 400 16px/32px Nunito;
-width: 90%;
-}                                             E
+}                                       
+                                           
 .contacts{
     display: flex;
     align-items: center;
@@ -390,7 +403,7 @@ width: 90%;
 .contacts>span{
 color: #666;
 font: normal 400 14px/24px Nunito;
-                                             N
+                                             
 }
 .conts{
     display: flex;
@@ -400,23 +413,23 @@ font: normal 400 14px/24px Nunito;
     color: #666;
     font: normal 400 14px/24px Nunito;
 }
-.links>form>input{
+.link>form>input{
     border-radius: 16px;
-    border: 1px solid  #666;                   N
+    border: 1px solid  #666;                   
 width: 192px;
 height: 40px;
 text-indent: 10px;
 }
-.links>form{
+.link>form{
     display: flex;
     flex-direction: column;
-    gap: 15px;                                     I
+    gap: 15px;                                     
 }
-.links>form>input:last-of-type{
+.link>form>input:last-of-type{
     background-color: #3854B5;
     color: #FFF;
 }
-                                               A
+                                               
 .choose{
     width: 100%;
     display: flex;
@@ -427,28 +440,28 @@ text-indent: 10px;
 }
 .chooseLeft{
     width: 50%;
-    display: flex;                                C
+    display: flex;                                
     justify-content: center;
     flex-direction: column;
     gap: 40px;
 }
 .dolor{
-    display: flex;                              M
+    display: flex;                              
     flex-direction: column;
     gap: 16px;
 }.dolor>h3{
     color: #333;
     font: normal 700 40px/56px Nunito;
 }
-.dolor>p{                                        I
+.dolor>p{                                        
     color:  #666;
-font: normal 400 26px/32px Nunito;
+font: normal 400 16px/32px Nunito;
 
 }
 .box{
  padding: 10px;
     width: 100%;
-    display: flex;                            Y
+    display: flex;                            
     gap: 12px;
   
 }
@@ -456,13 +469,13 @@ font: normal 400 26px/32px Nunito;
     transition: 0.3s ease-in-out;
     border-radius: 16px;
 background:  #FFF;
-box-shadow: 0px 80px 120px 0px rgba(34, 34, 34, 0.1);             I
+box-shadow: 0px 80px 120px 0px rgba(34, 34, 34, 0.1);             
 }
 .chooseRight>img{
     object-fit: contain;
 }
 .title>h4{
-    color: #333;                         N            LUTFENNN
+    color: #333;                      
     font: normal 700 32px/48px Nunito;
 
 }
@@ -544,8 +557,20 @@ background-color: #D9D9D9;
  .moveRight{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     width: 50%;
     gap: 24px;
+  }
+  .moveRight>button{
+    display: flex;
+    padding: 8px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #FFF;
+    border: none;
+    border-radius: 80px;
+background: var(--Primary-Blue, #3854B5);
   }
   .moveRight>.tempor>p{
   
@@ -554,19 +579,30 @@ background-color: #D9D9D9;
   }
   .moveRight>.tempor>h2{
     color:  #333;
-    font: normal 700 56px/72px Nunito;
+    font: normal 700 40px/56px Nunito;
   
   }
   .images{
     object-fit: contain;
     display: flex;
     gap: 16px;
+
   }
 
- */ 
+
+
+
 
 
   @media (max-width: 960px) {
+    .container{
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+       
+    }
 header{
     display: none;
 }
@@ -618,10 +654,163 @@ height: 100vh;
     flex-wrap: wrap;
 }
 .cols{
-    width: 50%;
+    width: 45%;
+}
+.cols>img{
+    width: 100%;
 }
 
 
+.lorem{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: space-between;
+    
+}
+.lorem>button{
+width: 35%;
+height: 50px;
+}
+
+.vision{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    padding: 80px 72px;
+    gap: 80px;
+    background: var(--Secondary-Light-Gray, #FAFAFA);
+}
+.missions,.visions{
+width:100% ;
+
+
+}
+.missions>.col{
+    width: 50%;
+display: flex;
+flex-direction: column;
+gap: 24px;
+}
+.visions>.col{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+gap: 24px;
+}
+.col>h3{
+    color: var(--Text-Title, #333);
+width: 150%;
+
+ 
+}
+.col>p{
+    color: var(--Text-Body, #666);
+width: 200%;
+
+}
+.col>img{
+    width: 200%;
+    object-fit: cover;
+}
+
+.visitData{
+    display: flex;
+    width: 100%;
+  flex-wrap: wrap;
+    }                                          
+    .data{
+    width: 45%;
+    }
+  
+   .step{
+    width: 100%;
+   }
+   .step>h3{
+    width: 150%;
+   }
+   .step>p{
+width: max-content;
+   }
+   .chooseRight{
+    display: none;
+   }
+   .chooseLeft{
+    width: 100%;
+   }
+  .box-page{
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .box1{
+    width: 45%;
+  }
+ 
+ .moveLeft{
+    display: none;
+ }
+ .moveRight{
+    width: 100%;
+  display: flex;
+  align-items: flex-start;
+ }
+ .tempor{
+    width: 100%;
+ }
+ .tempor>h2{
+    width: max-content;
+ }
+ .tempor>p{
+    width: max-content;
+ }
+ .moveRight>button{
+    display: flex;
+    border: none;
+    padding: 8px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #FFF;
+    font: normal 400px 16px/32px Nunito;
+    border-radius: 80px;
+background: var(--Primary-Blue, #3854B5);
+ }
+   
+footer{
+    display: flex;
+    width: 100%;
+  flex-wrap: wrap;
+    }
+    .links{
+    width: 25%;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .link{
+width: 100%;
+    }  
+
+  
+    .link>form>input{
+        border-radius: 16px;
+        border: 1px solid  #666;                   
+    width: 100%;
+    height: 40px;
+    text-indent: 10px;
+    }
+    .link>form{
+        width: 100%;
+                                          
+    }
+    .link>form>input:last-of-type{
+        background-color: #3854B5;
+        color: #FFF;
+    }
   }
 
 
@@ -629,7 +818,12 @@ height: 100vh;
 
 
 
-  @media (max-width:400px){
+  @media (max-width:570px){
+    .container{
+       margin: 0 auto;
+       display: flex;
+       flex-direction: column;
+    }
     .heroHome{
         width: 100%;
         display: flex;
@@ -643,11 +837,10 @@ height: 100vh;
  display: flex;
  flex-direction: column;
 
- justify-content: center;
     
 }
 .leftHero>h2{
-width: 150%;
+width: 0%;
 color: Text-Title, #333;
 font: normal 700 32px/48px Nunito;
 }
@@ -658,7 +851,7 @@ font: normal 700 32px/48px Nunito;
 
 }
 .leftHero >.form{
-    width: 189%;
+    width: 100%;
     padding: 8px;
     display: flex;
 align-items: center;
@@ -669,10 +862,10 @@ align-self: stretch;
 
 .leftHero>.form>form{
     width: 100%;
-    display: flex;
+    display: flex; 
     padding: 10px;
     align-items: center;
-   
+  
 }
 .leftHero>.form>form>input{
     height:24px ;
@@ -715,13 +908,40 @@ width: 100%;
 gap: 40px;
   
 }
-.listTured>h3{
-    width: 150%;
-}
-.listTured>p{
-    width: 150%;
 
+.houseStreet{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
+.cols{
+    width: 100%;
+}
+.cols>img{
+    width: 100%;
+}
+
+.lorem{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.lorem>button{
+    width: 150%;
+}
+
+.none{
+    display: none;
+}
+
 
 
   }
+
+
+
+
+
+
+

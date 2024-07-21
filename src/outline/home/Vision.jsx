@@ -26,7 +26,7 @@ export default function Section() {
     <div className="vision">
       <div className="visions">
         {visions?.map((vision, index) => (
-          <div className="cols" key={index}>
+          <div className="col" key={index}>
             <h3>{vision.title}</h3>
             <p>{vision.content}</p>
             <img src={`./${vision.image}`} alt={vision.title} />
@@ -36,7 +36,7 @@ export default function Section() {
       </div>
       <div className="missions">
         {missions?.map((mission, index) => (
-          <div className="cols" key={index}>
+          <div className="col" key={index}>
             <img src={`./${mission.image}`} alt={mission.title} />
             <h3>{mission.title}</h3>
             <p>{mission.content}</p>

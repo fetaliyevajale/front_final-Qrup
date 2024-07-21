@@ -15,7 +15,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="links">
+        <div className="links" >
           <h6>Useful Links</h6>
           <div className="links-class">
             <Link to="/listing" style={{color:'black'}}>Listing</Link>
@@ -45,7 +45,7 @@ export default function Footer() {
 </div>
         </div>
 
-        <div className="links">
+        <div className="link">
           <h6>Newsletter</h6>
 
 <form action="">
