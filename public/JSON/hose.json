@@ -1,0 +1,131 @@
+{
+    "houses":[
+    {
+       "id":"1",
+      "name": "Ataz Standard House",
+      "price": "$2,800",
+      "location": "Pluto Street, Indonesia",
+      "image": "/imagesFile/image1.jpg",
+      "rooms":"800 Sq Ft",
+      "bed":"1 Bedroom",
+      "bath":"2 Bathroom"
+    },
+    {
+        "id":"2",
+      "name": "Qiri Minimalist House",
+      "price": "$4,800",
+      "location": "Jupiter Street, Indonesia",
+      "image": "/imagesFile/image2.jpg",
+      "rooms":"1000 Sq Ft",
+      "bed":"2 Bedroom",
+      "bath":"3 Bathroom"
+    },
+    {
+        "id":"3",
+      "name": "Qanan Luxury House",
+      "price": "$6,500",
+      "location": "Mars Street, Indonesia",
+      "image": "/imagesFile/image3.jpg",
+      "rooms":"2800 Sq Ft",
+      "bed":"3 Bedroom",
+      "bath":"4 Bathroom"
+
+    },
+    {
+        "id":"4",
+      "name": "Tingah Elegant House",
+      "price": "$8,300",
+      "location": "Venus Street, Indonesia",
+      "image": "/imagesFile/image4.jpg",
+      "rooms":"3800 Sq Ft",
+      "bed":"4 Bedroom",
+      "bath":"5 Bathroom"
+    }
+  ,
+
+  {
+    "id":"5",
+    "name": "Nsor Standard House",
+    "price": "$2,800",
+    "location": "Pluto Street, Indonesia",
+    "image": "/imagesFile/image5.jpg",
+    "rooms":"800 Sq Ft",
+    "bed":"1 Bedroom",
+    "bath":"2 Bathroom"
+  },
+  {
+    "id":"6",
+    "name": "Qiwo Minimalist House",
+    "price": "$4,800",
+    "location": "Jupiter Street, Indonesia",
+    "image": "/imagesFile/image6.jpg",
+    "rooms":"1600 Sq Ft",
+    "bed":"2 Bedroom",
+    "bath":"3 Bathroom"
+  },
+  {
+    "id":"7",
+    "name": "Tengen Luxury House",
+    "price": "$160,500",
+    "location": "Mars Street, Indonesia",
+    "image": "/imagesFile/image7.jpg",
+    "rooms":"4200 Sq Ft",
+    "bed":"10 Bedroom",
+    "bath":"12 Bathroom"
+  },
+  {
+    "id":"8",
+    "name": "Tngah Elegant House",
+    "price": "$85,300",
+    "location": "Venus Street, Indonesia",
+    "image": "/imagesFile/image8.jpg",
+    "rooms":"2300 Sq Ft",
+    "bed":"9 Bedroom",
+    "bath":"12 Bathroom"
+  }
+
+  ,
+  {
+    "id":"9",
+    "name": "Ndukur Standart House",
+    "price": "$65,500",
+    "location": "Mars Street, Indonesia",
+    "image": "/imagesFile/image9.jpg",
+    "rooms":"1500 Sq Ft",
+    "bed":"7 Bedroom",
+    "bath":"8 Bathroom"
+  },
+  {
+    "id":"10",
+    "name": "Kenen Minimalist House",
+    "price": "$10,300",
+    "location": "Venus Street, Indonesia",
+    "image": "/imagesFile/image10.jpg",
+    "rooms":"1700 Sq Ft",
+    "bed":"4 Bedroom",
+    "bath":"5 Bathroom"
+  }
+ 
+  ,
+  {
+    "id":"11",
+    "name": "Kiro Luxury House",
+    "price": "$12,500",
+    "location": "Mars Street, Indonesia",
+    "image": "/imagesFile/image11.jpg",
+    "rooms":"1100 Sq Ft",
+    "bed":"3 Bedroom",
+    "bath":"4 Bathroom"
+  },
+  {
+    "id":"12",
+    "name": "Muter Elegant House",
+    "price": "$13,300",
+    "location": "Venus Street, Indonesia",
+    "image": "/imagesFile/image12.jpg",
+    "rooms":"900 Sq Ft",
+    "bed":"3 Bedroom",
+    "bath":"2 Bathroom"
+  }
+    
+  ]}

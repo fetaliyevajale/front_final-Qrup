@@ -11,7 +11,7 @@ export default function() {
 
 <div className="moveRight">
     <div className="tempor">
-        <h2>Let's Move to Your <br /> Dream Family Home</h2>
+        <h2>Let's Move to Your Dream Family Home</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br/> tempor incididunt ut labore et dolore magna aliqua.</p>
 
 </div>

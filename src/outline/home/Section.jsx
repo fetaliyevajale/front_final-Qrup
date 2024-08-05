@@ -25,7 +25,7 @@ export default function Section() {
       <div className="houseStreet">
         {houses?.map((house, index) => (
           <div className="cols" key={index}>
-            <img src={`./${house.image}`} alt="" />
+            <img src={`${house.image}`} alt="" />
             <h4>{house.name}</h4>
             <div className="icons">
               <i className="fa-solid fa-location-dot"></i>

@@ -1,0 +1,25 @@
+{
+    "rights":[
+    {
+       "id":"1",
+      "name": "Ataz Standard House",
+      "price": "$2,800",
+      "location": "Pluto Street, Indonesia",
+      "image": "/imagesFile/image1.jpg",
+      "rooms":"800 Sq Ft",
+      "bed":"1 Bedroom",
+      "bath":"2 Bathroom"
+    },
+    {
+      "id":"2",
+      "name": "Qiri Minimalist House",
+      "price": "$4,800",
+      "location": "Jupiter Street, Indonesia",
+      "image": "/imagesFile/image2.jpg",
+      "rooms":"1000 Sq Ft",
+      "bed":"2 Bedroom",
+      "bath":"3 Bathroom"
+    }
+    
+  ]
+}

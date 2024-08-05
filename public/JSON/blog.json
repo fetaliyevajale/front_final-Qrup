@@ -1,0 +1,51 @@
+{
+    "blogs": [
+      {
+        "id":"1",
+        "title": "5 Things to do before moving: from packing to settling in",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+        "link": "Read More",
+         "image": "./imagesFile/image2.jpg"
+       
+      },
+      {
+        "id":"2",
+        "title": "Mindfulness as a strategy and planning for your real estate business",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+        "link": "Read More",
+         "image": "./imagesFile/image3.jpg"
+     
+      },
+      {
+        "id":"3",
+        "title": "Home Sales Post Rare May Decline as Mortgage Rates Rise",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+        "link": "Read More",
+         "image": "./imagesFile/image4.jpg"
+       
+      },
+      {"id":"4",
+        "title": "Must-Try Cafes and Coffee Shops in Austin – Plus What to Order at Each Spot",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+        "link": "Read More",
+         "image": "./imagesFile/image5.jpg"
+   
+      },
+      {
+        "id":"5",
+        "title": "How Many Boxes Do I Need to Move? We'll Help You Unpack the Answer",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+        "link": "Read More",
+         "image": "./imagesFile/image6.jpg"
+     
+      },
+      {
+        "id":"6",
+        "title": "Should You Buy a House with Popcorn Ceilings? And How to Remove Them",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+        "link": "Read More",
+         "image": "./imagesFile/image7.jpg"
+      
+      }
+    ]
+  }

@@ -6,7 +6,7 @@ export default function Footer() {
     <div>
       <footer>
         <div className="links">
-          <img src="./Logo.png" alt="Logo" style={{ width: 100 }} />
+          <img src="/imagesFile/Logo.png" alt="Logo" style={{ width: 100 }} />
           <div className="p">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

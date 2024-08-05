@@ -43,7 +43,7 @@ export default function Section() {
       </div>
 
       <div className="chooseRight">
-        <img src="./Image (8).png" alt="Choose Us" />
+        <img src="/imagesFile/Image (8).png" alt="Choose Us" />
       </div>
     </div>
   );

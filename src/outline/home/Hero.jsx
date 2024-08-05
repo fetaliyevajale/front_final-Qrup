@@ -38,7 +38,7 @@ export default function Hero() {
         </div>
 
         <div className="imgHero">
-          <img src="./Image.png" alt="Image" />
+          <img src="/imagesFile/Image.png" alt="Image" />
         </div>
       </div>
 

@@ -1,6 +1,5 @@
 import React from "react";
 import { Routes, Route, Link, NavLink } from "react-router-dom";
-import Fotter from "./Fotter";
 import Hero from "./Hero";
 import Section from "./Section";
 import Vision from "./Vision";
@@ -42,7 +41,7 @@ export default function Home() {
 
 <Box/>
 <Movie/>
-<Fotter/>
+
     </div>
   );
 }

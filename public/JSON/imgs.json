@@ -4,24 +4,27 @@
     "name": "Ataz Standard House",
     "price": "$2,800",
     "location": "Pluto Street, Indonesia",
-    "image": "../Image (1).png"
+    "image": "./imagesFile/image1.jpg"
   },
   {
     "name": "Qiri Minimalist House",
     "price": "$4,800",
     "location": "Jupiter Street, Indonesia",
-    "image": "../Image (2).png"
+    "image": "./imagesFile/image2.jpg"
   },
   {
     "name": "Qanan Luxury House",
     "price": "$6,500",
     "location": "Mars Street, Indonesia",
-    "image": "../Image (3).png"
+    "image": "./imagesFile/image3.jpg"
   },
   {
     "name": "Tingah Elegant House",
     "price": "$8,300",
     "location": "Venus Street, Indonesia",
-    "image": "../Image (4).png"
+    "image": "./imagesFile/image4.jpg"
   }
+
+
+  
 ]}
