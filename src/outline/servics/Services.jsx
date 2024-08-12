@@ -39,17 +39,6 @@ export default function Services() {
 </div>
 
 <VarLet/>
-
-
-
-
-
-
-
-
-
-
-
  </div>
   )
 }

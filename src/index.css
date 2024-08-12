@@ -931,7 +931,7 @@ footer {
 .chooseLeft {
   width: 50%;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   flex-direction: column;
   gap: 40px;
 }
@@ -963,10 +963,19 @@ footer {
 .chooseRight > img {
     width: 100%;
   object-fit: contain;
+  height: auto;
 }
 .title > h4 {
   color: #333;
   font: normal 700 32px/48px Nunito;
+}
+.title > h5 {
+  color: #333;
+  font: normal 700 32px/48px Nunito;
+}
+.title>span{
+  color: #666;
+  font: normal 400 16px/32px Nunito;
 }
 .title > p {
   color: #666;
@@ -990,7 +999,180 @@ footer {
   background: #222430;
   padding: 10px;
 }
+.aboutPost{
+  padding-bottom: 70px;
+  width: 100%;
+  display: flex;
+  gap: 16px;
+}
+.postList{
+width: 25%;
+}
+.containerPages{
+  width: 100%;
+  display: flex;
+}
+.pagesContainer{
+  padding: 80px 72px;
+}
+.heroPages{
+width: 100%;
+display: flex;
+gap: 16px;
+justify-content: center;
+flex-wrap: wrap;
+}
+.pagesList{
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 23%;
+}
+.pagesList>h5{
+  color:  #333;
+  font: normal 400 32px/48px Nunito;
+}.pagesList>span{
+  color:  #666;
+  font: normal 400 16px/32px Nunito;
+}
+.pagesList>img{
+  width: 100%;
+  object-fit: cover;
+}
+.containerAbout{
+  width: 100%;
+  padding: 80px 72px;
+  display: flex;
+  flex-direction: column;
+}
+.centerContact{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+.leftContact{
+  width: 40%;
+}
+.leftContact>.links{
+  width: 100%;
+}
+.leftContact>.links>h6{
+  color: var(--Text-Title, #333);
 
+/* Heading/Bold/H3 */
+font-family: Nunito;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: 56px; /* 140% */
+}
+.leftContact>.links>.alt{
+  width: 100%;
+}
+.leftContact>.links>.alt>img{
+  width: 100%;
+  object-fit: cover;
+}
+.rightContact{
+  width: 60%;
+  margin-bottom: 60px;
+}
+.rightContact>.formRight{
+  margin-top: 15px;
+display: flex;
+gap: 16px;
+flex-direction: column;
+width: 100%;
+}
+.rightContact>.formRight>form{
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  }
+  .rightContact>.formRight>form>.form-control{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+  .rightContact>.top>h3{
+    color: #333;
+font: normal 700 40px/56px Nunito;
+
+  }
+  .rightContact>.formRight>form>.form-control> label{
+    color:  #666;
+    font: normal 400 14px/24px Nunito;
+
+  }
+  .rightContact>.formRight>form>.form-control>input,select{
+    width: 100%;
+    height: 88px;
+    border-radius: 16px;
+    border: 1px solid  #666;
+    display: flex;
+padding: 16px;
+align-items: center;
+gap: 8px;
+outline-width: 0;
+align-self: stretch;
+color:  #B8B8B8;
+font: normal 400 16px/32px Nunito;
+  }
+  .rightContact>.formRight>form>.form-control>textarea{
+   resize: none;
+   height: 120px;
+   border-radius: 16px;
+   border: 1px solid  #666;
+   width: 100%;
+   outline-width: 0;
+padding: 16px;
+color:  #B8B8B8;
+font: normal 400 16px/32px Nunito;
+  }   
+  .rightContact>button{
+    margin-top: 20px ;
+    border-radius: 80px;
+background:  #3854B5;
+display: flex;
+padding: 8px 40px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+color: #fff;
+border: none;
+height: 50px;
+  }
+.loremIpsum{
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+.loremIpsum>button{
+  display: flex;
+  padding: 8px 40px;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  gap: 8px;
+  border-radius: 80px;
+  border: 1px solid #666;
+  color: #333;
+  font: normal 600 16px/32px Nunito;
+}
+.postList>img{
+  width: 100%;
+}
+.postList>h5{
+  color: #333;
+  font: normal 700 32px/48px Nunito;
+}
+.postList>span{
+  color: #666;
+  font: normal 400 16px/32px Nunito;
+}
 .box-page {
   width: 100%;
   display: flex;
@@ -1090,7 +1272,81 @@ padding: 60px;
     object-fit: cover;
     width: 40%;
 }
+.postBlog{
+  
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+padding: 80px 72px;
+}
+.titles{
+  margin-top: 140px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.titles>h3{
+  color:  #333;
+  font: normal 700 56px/72px Nunito;
+  text-align: center;
+}
+.postBlog>img{
+  width: 100%;
+  height:100vh;
+  object-fit: cover;
+}
+.blogCntr{
+  padding: 80px 72px;
+  display: flex;
+  width: 100%;
+  gap: 80px;
+}
+.contentBlog{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  gap: 32px;
+}
+.topBlog{
+  display: flex;
+  flex-direction: column;
+  gap:40px;
+  width: 100%;
+}
+.centerBlog{
+  display: flex;
+  gap: 20px;
+  height: auto;
+  width: 100%;
+}
+.centerBlog>.imgB{
+  width:100% ;
+ 
+}
+.centerBlog>.imgC{
+  width:100% ; 
+}
+.centerBlog>.imgB>img{
+  width: 100%;
+  object-fit: cover;
 
+}
+.centerBlog>.imgC>img{
+  width: 100%;
+  object-fit: cover;
+}
+.about{
+  
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 80px 72px;
+  gap: 80px;
+
+}
 .flexWrap {
   width: 100%;
   display: flex;
@@ -1117,26 +1373,16 @@ padding: 60px;
   gap: 10px;
 }
 .listing > h2 {
-  color: var(--Text-Title, #333);
+  color:  #333;
   text-align: center;
+  font: normal 700 56px/72px Nunito;
 
-  /* Heading/Bold/H2 */
-  font-family: Nunito;
-  font-size: 56px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 72px; /* 128.571% */
 }
 .listing > p {
-  color: var(--Text-Body, #666);
+  color: #666;
   text-align: center;
-
-  /* Paragraph/Body */
-  font-family: Nunito;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 32px; /* 200% */
+font: normal 400 16px/32px Nunito;
+ 
 }
 .rooms {
   display: flex;
@@ -1338,7 +1584,18 @@ padding: 80px 72px;
     justify-content: flex-end;
     padding: 80px 72px;
     gap: 80px;
-    background: var(--Secondary-Light-Gray, #fafafa);
+    background:  #fafafa;
+  }
+  .about{
+  
+      width: 100%;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 80px 72px;
+      gap: 80px;
+
   }
   .missions,
   .visions {

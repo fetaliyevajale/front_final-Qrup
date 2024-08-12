@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 export default function HeroSection() {
   const [houses, setHouses] = useState([]);
@@ -18,7 +17,6 @@ export default function HeroSection() {
         console.log(data.houses);
       } catch (error) {
         console.error("Error fetching data:", error);
-       
       }
     };
 
@@ -33,11 +31,13 @@ export default function HeroSection() {
     <div>
       <div className="flexWrap">
         {houses?.map((house, index) => (
-          <div className="cols" key={index} onClick={() => handleClick(house.id)}>
+          <div
+            className="cols"
+            key={index}
+            onClick={() => handleClick(house.id)}
+          >
+            <img src={`.${house.image}`} alt="" />
 
-             <img src={`.${house.image}`} alt="" />
-        
-           
             <h4>{house.name}</h4>
             <div className="icons">
               <i className="fa-solid fa-location-dot"></i>

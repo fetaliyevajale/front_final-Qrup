@@ -1,0 +1,25 @@
+{
+    "profiles":  [
+        {
+          "name":"Shoo Phar Dhie",
+          "image": "/imagesFile/profil1.jpg",
+          "titles":"CEO"
+        },
+        {
+          "name":"Shoo Thar Mhie",
+          "image": "/imagesFile/profil2.jpg",
+          "titles":"Project Manager"
+        },
+        {
+          "name":"Shoo Khir Mhan",
+          "image": "/imagesFile/profil3.jpg",
+          "titles":"Marketing Manager"
+        }
+        ,
+        {
+          "name":"Shoo Han Tho",
+          "image": "/imagesFile/profil4.jpg",
+          "titles":"Sales Manager"
+        }
+      ]
+}

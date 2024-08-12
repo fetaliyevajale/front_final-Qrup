@@ -27,13 +27,12 @@ export default function Section() {
           <div className="box1" key={index}>
             <p>{box.description}</p>
             <div className="icon">
-            <div className="div"></div>
-<div className="user">
-<h6>{box.title}</h6>
-<span>{box.userTitle}</span>
-</div>
+              <div className="div"></div>
+              <div className="user">
+                <h6>{box.title}</h6>
+                <span>{box.userTitle}</span>
+              </div>
             </div>
-   
           </div>
         ))}
       </div>

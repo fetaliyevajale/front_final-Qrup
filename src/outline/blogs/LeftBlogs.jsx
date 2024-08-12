@@ -1,8 +1,7 @@
-
 import React, { useState, useEffect } from "react";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-export default function HeroSection() {
+export default function LeftBlogs() {
   const [blogs, setBlogs] = useState([]);
   const navigate = useNavigate();
 
@@ -18,7 +17,6 @@ export default function HeroSection() {
         console.log(data.blogs);
       } catch (error) {
         console.error("Error fetching data:", error);
-       
       }
     };
 
@@ -26,42 +24,40 @@ export default function HeroSection() {
   }, []);
 
   const handleClick = (id) => {
-    navigate(`singleBlog/${id}`);
+    navigate(`/singleBlog/${id}`);
   };
 
   return (
     <div className="leftBlogs">
       <div className="blogPost">
         {blogs?.map((blog, index) => (
-          <div className="post" key={index} >
-             <img src={`.${blog.image}`} alt="" />
-        
-<div className="icons">
+          <div className="post" key={index}>
+            <img src={`.${blog.image}`} alt="" />
 
-  <div className="solid">
-    <i className="fa-regular fa-calendar" style={{color:"#666"}}></i> 
-  <span style={{color:"#666"}}>18 June 2022</span>  
-  </div>
- 
-<div className="solid">
-  <i className="fa-solid fa-folder-open" style={{color:"#666"}}></i>
-<span style={{color:"#666"}}>Uncategorized</span>
-</div>
+            <div className="icons">
+              <div className="solid">
+                <i className="fa-regular fa-calendar" style={{ color: "#666" }}></i>
+                <span style={{ color: "#666" }}>18 June 2022</span>
+              </div>
 
-</div>
-      <h5>{blog.title}</h5>
-        <p>{blog.excerpt}</p>  
+              <div className="solid">
+                <i className="fa-solid fa-folder-open" style={{ color: "#666" }}></i>
+                <span style={{ color: "#666" }}>Uncategorized</span>
+              </div>
+            </div>
 
-<div className="href">
-  <a href="" onClick={() => handleClick(blog.id)}>{blog.link}</a>
-  <i className="fa-solid fa-chevron-right"></i>
-</div>
-        
+            <h5>{blog.title}</h5>
+            <p>{blog.excerpt}</p>
+
+            <div className="href">
+              <Link to={`/singleBlog/${blog.id}`} onClick={() => handleClick(blog.id)}>
+                {blog.link}
+              </Link>
+              <i className="fa-solid fa-chevron-right"></i>
+            </div>
           </div>
         ))}
-
       </div>
     </div>
   );
 }
-

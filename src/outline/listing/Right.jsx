@@ -22,11 +22,11 @@ export default function HeroSection() {
   console.log(rights);
   return (
     <div className="rightCont">
-  <h3>Other Property</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt 
-        </p>
+      <h3>Other Property</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt
+      </p>
       <div
         className="flexs"
         style={{ display: "flex", flexDirection: "column" }}

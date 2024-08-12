@@ -1,0 +1,46 @@
+{
+    "profiles":  [
+        {
+          "name":"Shoo Phar Dhie",
+          "image": "/imagesFile/profil1.jpg",
+          "titles":"CEO"
+        },
+        {
+          "name":"Shoo Thar Mhie",
+          "image": "/imagesFile/profil2.jpg",
+          "titles":"Project Manager"
+        },
+        {
+          "name":"Shoo Khir Mhan",
+          "image": "/imagesFile/profil3.jpg",
+          "titles":"Marketing Manager"
+        }
+        ,
+        {
+          "name":"Shoo Han Tho",
+          "image": "/imagesFile/profil4.jpg",
+          "titles":"Sales Manager"
+        },
+        {
+            "name":"Shoo Mhin Tho",
+            "image": "/imagesFile/profil5.jpg",
+            "titles":"Staff"
+          },
+          {
+            "name":"Shoo Khar Jho",
+            "image": "/imagesFile/profil6.jpg",
+            "titles":"Staff "
+          },
+          {
+            "name":"Shoo Bro Tho",
+            "image": "/imagesFile/profil7.jpg",
+            "titles":"Staff"
+          }
+          ,
+          {
+            "name":"Shoo Yho Nho",
+            "image": "/imagesFile/profil8.jpg",
+            "titles":"Staff "
+          }
+      ]
+}
