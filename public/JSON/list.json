@@ -1,0 +1,31 @@
+{
+    "visits":[
+    {
+        "numbers":"1.",
+        "link":"Learn More",
+    "title":"Real Estate ",
+    "content":"Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+    },
+    {
+        "numbers":"2.",
+        "link":"Learn More",
+    "title":"Buying a House",
+    "content":"Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+    }
+    ,
+    {
+        "numbers":"3.",
+        "link":"Learn More",
+    "title":"Build a House",
+    "content":"Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+    },
+    {
+        "numbers":"4.",
+        "link":"Learn More",
+    "title":"Developer",
+    "content":"Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+    }
+    
+    ]
+    
+    }

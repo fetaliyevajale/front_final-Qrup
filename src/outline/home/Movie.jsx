@@ -6,7 +6,7 @@ export default function() {
 
 <div className="movie">
 <div className="moveLeft">
-    <img src="/imagesFile/Image (12).png" alt="" />
+    <img src="/imagesFile/image (20).jpg" alt="" />
 </div>
 
 <div className="moveRight">
@@ -18,7 +18,7 @@ export default function() {
 <button>Get Quote Now</button>
 
 
-<div className="images">
+<div className="images" >
   <img src="/imagesFile/image10.jpg" alt="" />
   <img src="/imagesFile/image11.jpg" alt="" />
   <img src="/imagesFile/image12.jpg" alt="" /> 

@@ -1,0 +1,28 @@
+{
+    "pages": [
+      {
+        "id":"1",
+        "title": "5 Things to do before moving: from packing to settling in",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+        "link": "Read More",
+         "image": "./imagesFile/image2.jpg"
+       
+      },
+      {
+        "id":"2",
+        "title": "Mindfulness as a strategy and planning for your real estate business",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+        "link": "Read More",
+         "image": "./imagesFile/image3.jpg"
+     
+      },
+      {
+        "id":"3",
+        "title": "Home Sales Post Rare May Decline as Mortgage Rates Rise",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+        "link": "Read More",
+         "image": "./imagesFile/image4.jpg"
+       
+      }
+    ]
+  }

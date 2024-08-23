@@ -1,5 +1,4 @@
-
-
+import React, { useState } from "react";
 import { Route, NavLink, Routes } from "react-router-dom";
 import Home from "./outline/home/Home";
 import Listing from "./outline/listing/Listing";
@@ -12,12 +11,22 @@ import ListingDetails from "./outline/listing/ListingDetails";
 import Blog from "./outline/blogs/Blog";
 import SingleBlog from "./outline/blogs/SingleBlog";
 
-import Gallery from "./outline/pages/Gallery"; 
+import Gallery from "./outline/pages/Gallery";
 import HelpCenter from "./outline/pages/HelpCenter";
+import NotFound from "./outline/pages/NotFound";
+import Sidebar from "./Sidebar";
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div>
+      <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
+
       <div className="desktopPages">
         <div className="headerImg">
           <img src="/imagesFile/Logo.png" alt="Logo" />
@@ -44,39 +53,26 @@ function App() {
               Contact Us
             </NavLink>
 
-            {/* Dropdown for Pages */}
-            <div className="dropdown">
-              <NavLink
-                className=""
-                style={{ color: "black" }}
-                to="/pages"
-              
-              >
-                Pages
-              </NavLink>
-              <ul className="dropdown-menu" >
+            <div className="custom-dropdown">
+              <button className="dropdown-toggle">Pages</button>
+              <ul className="dropdown-menu">
                 <li>
-                  <NavLink className="dropdown-item" to="/gallery">
-                    Gallery
-                  </NavLink>
+                  <NavLink to="/help-center">Help Center</NavLink>
                 </li>
                 <li>
-                  <NavLink className="dropdown-item" to="/help-center">
-                    Help Center
-                  </NavLink>
+                  <NavLink to="/gallery">Gallery</NavLink>
                 </li>
                 <li>
-                  <NavLink className="dropdown-item" to="*">
-                    404 Page
-                  </NavLink>
+                  <NavLink to="*">404 Page</NavLink>
                 </li>
               </ul>
             </div>
           </header>
-          <i className="fa-solid fa-bars"></i>
+          <i className="fa-solid fa-bars" onClick={toggleSidebar}></i>
           <button>Get a Quote</button>
         </div>
       </div>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/listing" element={<Listing />} />
@@ -90,7 +86,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/help-center" element={<HelpCenter />} />
         {/* 404 Page */}
-        <Route path="*" element={<>404 NOT FOUND</>} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Fotter />
     </div>

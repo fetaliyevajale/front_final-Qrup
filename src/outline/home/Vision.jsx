@@ -30,7 +30,7 @@ export default function Section() {
             <h3>{vision.title}</h3>
             <p>{vision.content}</p>
             <img src={`.${vision.image}`} alt={vision.title} />
-            <h4>{vision.name}</h4>w
+            <h4>{vision.name}</h4>
           </div>
         ))}
       </div>
