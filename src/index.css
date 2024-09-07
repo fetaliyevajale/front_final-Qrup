@@ -16,6 +16,10 @@
 
   justify-content: center;
 }
+button{
+  cursor: pointer;
+  color: #fff;
+}
 
 .desktopPages {
   display: flex;
@@ -36,12 +40,13 @@
   gap: 35px;
   align-items: center;
 }
+
 header {
   display: flex;
   gap: 35px;
   align-items: center;
 }
-/* Custom Dropdown */
+
 .custom-dropdown {
   position: relative;
   display: inline-block;
@@ -54,7 +59,6 @@ header {
   font-size: 16px;
   border: none;
   cursor: pointer;
-  /* border-radius: 5px; */
   outline: none;
 }
 
@@ -108,9 +112,13 @@ header {
   height: 35px;
   border-radius: 80px;
   border: none;
-  background: #3854b5;
+  background: blue;
   color: #fff;
   font: normal 600 12px/24px Nunito;
+}
+.headers>button:hover{
+  background-color: darkblue;
+  color: #fff;
 }
 .headers > i {
   display: none;
@@ -191,11 +199,16 @@ header {
   justify-content: center;
   align-items: center;
   gap: 8px;
+  color: #fff;
   border-radius: 80px;
   background: #3854b5;
   border: none;
 }
-
+.form > button:hover{
+  color: #c4c6d0;
+  background-color: darkblue;
+  cursor: pointer;
+}
 .number {
   display: flex;
   gap: 40px;
@@ -403,6 +416,10 @@ header {
   background: #3854b5;
   height: 45px;
   color: #fff;
+}
+.btnDiv > button:hover{
+  background-color: darkblue;
+  color: #c4c6d0;
 }
 .concate {
   width: 100%;
@@ -843,7 +860,10 @@ border: 1px solid #666;
   color: #333;
   font: normal 600 16px/32px Nunito;
 }
-
+.lorem > button:hover{
+  background-color: #bfc6ee;
+color: #fff;
+}
 .step {
   display: flex;
   align-items: center;
@@ -1300,11 +1320,18 @@ height: 50px;
   padding: 8px 40px;
   justify-content: center;
   align-items: center;
+height: 50px;
   gap: 8px;
   color: #fff;
   border: none;
   border-radius: 80px;
-  background: #3854b5;
+  background-color: blue;
+}
+
+
+.moveRight > button:hover{
+  background-color: rgb(11, 11, 128);
+  color: #fff;
 }
 .tempor{
     width: 100%;
@@ -1362,6 +1389,123 @@ padding: 80px 72px;
   width: 100%;
   gap: 80px;
 }
+
+.faq-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 72px; 
+  display: flex;
+  width: 100%;
+  gap: 80px;
+  box-sizing: border-box;
+}
+
+.faq-left-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-placeholder {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+
+.faq-right-content {
+  flex: 1;
+  width: 50%;
+  padding-left: 40px;
+}
+
+
+
+.accordion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 4px 8px rgba(229, 229, 229, 0.1);
+}
+
+.accordion-item {
+ border: 1px solid #b0adad;
+ border-radius: 8px;
+}
+
+.accordion-header {
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: #f9f9f9;
+}
+
+.accordion-header.active {
+  background-color: #f0f0f0;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: #fafafa;
+  padding: 0 15px;
+}
+
+.accordion-content p {
+  padding: 15px 0;
+  margin: 0;
+  color: #666;
+}
+
+.accordion-content.open {
+  max-height: 100px; 
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 5px;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+.arrow.rotate {
+  transform: rotate(-135deg);
+}
+
+/* Media Query for Responsive Layout */
+@media (max-width: 768px) {
+  .faq-container {
+      flex-direction: column;
+  }
+
+  .faq-right-content {
+      padding-left: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 .contentBlog{
   display: flex;
   flex-direction: column;

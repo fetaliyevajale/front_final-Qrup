@@ -1,46 +1,47 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from 'react';
 
-export default function RightEstate() {
-  const [questions, setQuestions] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("/JSON/estate.json");
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const data = await response.json();
-        setQuestions(data?.questions);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
+const FaqAccordion = () => {
+    const [activeIndex, setActiveIndex] = useState(null);
+
+    const toggleAccordion = (index) => {
+        setActiveIndex(activeIndex === index ? null : index);
     };
 
-    fetchData();
-  }, []);
+    return (
+        <div className="faq-container">
+          <div className="estateLeft">
+     <img src="/imagesFile/photo2.jpg" alt="" />
+<div className="relativ">
+<img src="/imagesFile/photo1.jpg" alt="" />
+</div>
 
-  return (
-    <div className="choose">
-        <div className="chooseRight">
-        <img src="/imagesFile/Image (8).png" alt="Choose Us" />
-      </div>
-      <div className="chooseLeft">
-      <div className="dolor">
-      <h3>Frequently Ask Question</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-        {questions?.map((question, index) => (
-          <div className="dataKey" key={index}>
-          <select name="" id="" >
-            <option value="" style={{color:'#333'}}>{question.question}</option>
-            <option value="">{question.answer}</option>
-            </select>
-          </div>
-        ))}
-      </div>
+</div>
+            <div className="faq-right-content">
+                <h2>Frequently Asked Questions</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-      
-    </div>
-  );
-}
+                <div className="accordion">
+                    {['Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.'].map((question, index) => (
+                        <div key={index} className="accordion-item">
+                            <div 
+                                className={`accordion-header ${activeIndex === index ? 'active' : ''}`} 
+                                onClick={() => toggleAccordion(index)}
+                            >
+                                <span>{question}</span>
+                                <i className={`arrow ${activeIndex === index ? 'rotate' : ''}`}></i>
+                            </div>
+                            <div 
+                                className={`accordion-content ${activeIndex === index ? 'open' : ''}`}
+                            >
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default FaqAccordion;
