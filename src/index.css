@@ -16,9 +16,113 @@
 
   justify-content: center;
 }
-button{
-  cursor: pointer;
+
+/* Login page main styles */
+#login {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  font-family: 'Arial', sans-serif;
+}
+
+
+#loginRight {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f7f9fc;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.rightBox {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  background-color: #fff;
+  text-align: center;
+  transform: translateY(-20px);
+  animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateY(0);
+  }
+}
+
+.rightBox img {
+  width: 100px;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+.rightBox .title {
+  font-size: 2rem;
+  color: #4e54c8;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.rightBox .same {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.rightBox form {
+  display: flex;
+  flex-direction: column;
+}
+
+.rightBox label {
+  text-align: left;
+  font-weight: bold;
+  color: #4e54c8;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.rightBox input {
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f7f9fc;
+}
+
+.rightBox input:focus {
+  border-color: #8f94fb;
+  outline: none;
+  box-shadow: 0 0 5px rgba(79, 92, 230, 0.5);
+}
+
+.rightBox p {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin: -1rem 0 1rem;
+}
+
+.rightBox button {
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
   color: #fff;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.rightBox button:hover {
+  background: linear-gradient(135deg, #8f94fb, #4e54c8);
+  box-shadow: 0 4px 10px rgba(78, 84, 200, 0.4);
+  transform: translateY(-2px);
 }
 
 .desktopPages {
@@ -64,6 +168,41 @@ header {
 
 
 
+#adminDashboard {
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+.same {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.same:hover {
+  color: #0056b3;
+}
+
+h3 {
+  margin-top: 30px;
+  font-size: 20px;
+  color: #555;
+}
 
 
 
