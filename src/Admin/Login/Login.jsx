@@ -37,7 +37,7 @@ export default function Login() {
             }
         })
         .catch((error) => {
-            console.error(error); // Hata mesajını konsola çıxart
+            console.error(error);
             setErrors({ email: error.message, password: error.message });
         });
     };

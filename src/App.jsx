@@ -16,6 +16,7 @@ import NotFound from "./outline/pages/NotFound";
 import Sidebar from "./Sidebar";
 import Login from "./Admin/Login/Login";
 import Admin from "./Admin/Admin";
+import BlogForm from "./Admin/Blogs/BlogForm";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,18 +26,21 @@ function App() {
     setIsOpen(!isOpen);
   };
 
-  // Check if the current path is the login page
+  // Check if the current path is the login or admin page
   const isLoginPage = location.pathname === "/";
+  const isAdminPage = location.pathname.startsWith("/admin");
 
   return (
     <div>
       {/* Only render Routes for Login and Admin */}
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/admin" element={<Admin />} />
         
-        {/* Only show these routes if not on the login page */}
-        {!isLoginPage && (
+        {/* Admin marşrutları */}
+        <Route path="/admin/*" element={<Admin />} /> {/* Admin komponentini istifadə edin */}
+        
+        {/* Digər marşrutlar */}
+        {!isLoginPage && !isAdminPage && (
           <>
             <Route path="/home" element={<Home />} />
             <Route path="/listing" element={<Listing />} />
@@ -51,12 +55,13 @@ function App() {
             <Route path="/help-center" element={<HelpCenter />} />
             {/* 404 Page */}
             <Route path="*" element={<NotFound />} />
+            
           </>
         )}
       </Routes>
 
-      {/* Only display Sidebar, Navbar, and Fotter if not on the login page */}
-      {!isLoginPage && (
+      {/* Only display Sidebar, Navbar, and Fotter if not on the login or admin page */}
+      {!isLoginPage && !isAdminPage && (
         <>
           <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
           <div className="desktopPages">
@@ -66,37 +71,19 @@ function App() {
 
             <div className="headers">
               <header>
-                <NavLink style={{ color: "black" }} to="/home">
-                  Home
-                </NavLink>
-                <NavLink style={{ color: "black" }} to="/listing">
-                  Listing
-                </NavLink>
-                <NavLink style={{ color: "black" }} to="/services">
-                  Services
-                </NavLink>
-                <NavLink style={{ color: "black" }} to="/blog">
-                  Blog
-                </NavLink>
-                <NavLink style={{ color: "black" }} to="/about">
-                  About
-                </NavLink>
-                <NavLink style={{ color: "black" }} to="/contact">
-                  Contact Us
-                </NavLink>
+                <NavLink style={{ color: "black" }} to="/home">Home</NavLink>
+                <NavLink style={{ color: "black" }} to="/listing">Listing</NavLink>
+                <NavLink style={{ color: "black" }} to="/services">Services</NavLink>
+                <NavLink style={{ color: "black" }} to="/blog">Blog</NavLink>
+                <NavLink style={{ color: "black" }} to="/about">About</NavLink>
+                <NavLink style={{ color: "black" }} to="/contact">Contact Us</NavLink>
 
                 <div className="custom-dropdown">
                   <button className="dropdown-toggle">Pages</button>
                   <ul className="dropdown-menu">
-                    <li>
-                      <NavLink to="/help-center">Help Center</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/gallery">Gallery</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="*">404 Page</NavLink>
-                    </li>
+                    <li><NavLink to="/help-center">Help Center</NavLink></li>
+                    <li><NavLink to="/gallery">Gallery</NavLink></li>
+                    <li><NavLink to="*">404 Page</NavLink></li>
                   </ul>
                 </div>
               </header>
@@ -105,7 +92,7 @@ function App() {
             </div>
           </div>
 
-          {/* Only display Fotter if not on the login page */}
+          {/* Only display Fotter if not on the login or admin page */}
           <Fotter />
         </>
       )}
