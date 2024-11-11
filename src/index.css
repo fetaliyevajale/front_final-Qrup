@@ -480,6 +480,69 @@ button:focus {
 }
 
 
+/*Teams/team form */
+
+/* Team form konteyneri */
+.teamhome {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.teamhome h1 {
+  font-size: 1.8rem;
+  color: #343a40;
+  margin-bottom: 1.5rem;
+}
+
+/* Input sahələri */
+.teamhome form input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #495057;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.teamhome form input[type="text"]:focus {
+  border-color: #007bff;
+}
+
+/* Submit düyməsi */
+.teamhome form button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.teamhome form button:hover {
+  background-color: #0056b3;
+}
+
+.teamhome form button:focus {
+  outline: none;
+}
+
+
+
+
+
+
+
 .dropdown-toggle:hover {
   background-color: #dcdcdc;
 }

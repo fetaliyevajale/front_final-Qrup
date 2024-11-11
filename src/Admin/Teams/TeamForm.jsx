@@ -35,11 +35,11 @@ const TeamForm = () => {
             body: JSON.stringify({ name, position }),
         });
 
-        navigate('/admin/Teams'); 
+        navigate('/Teams/TeamList'); 
     };
 
     return (
-        <div>
+        <div className='teamhome'> 
             <h1>{isEditing ? 'Edit Team Member' : 'Add New Team Member'}</h1>
             <form onSubmit={handleSubmit}>
                 <input

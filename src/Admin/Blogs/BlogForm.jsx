@@ -30,7 +30,7 @@ const BlogForm = () => {
         formData.append('uncategorized', uncategorized);
 
         try {
-            const response = await axios.post('http://127.0.0.1:8000/api/blogs/store', formData, {
+            const response = await axios.post('http://127.0.0.1:8000/api/admin/blogs/store', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                     'Authorization': `Bearer ${localStorage.getItem('token')}`, 

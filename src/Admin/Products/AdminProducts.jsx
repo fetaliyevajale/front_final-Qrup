@@ -41,7 +41,7 @@ const AdminProducts = () => {
     const handleDelete = (id) => {
         console.log('handleDel')
         // axios.delete(`http://127.0.0.1:8000/api/products/${id}`, {
-        //     headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
+        //     headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}`  buranı mellim edib serhe alib oz kodlarin yapisdirdi  ccoooooooxxxxx naxaaqqqqqqqq }
         // })
         // .then(() => fetchProducts()) 
         // .catch(error => console.error(error));

@@ -21,7 +21,7 @@ const UpdateBlog = () => {
 
     const fetchBlog = async () => {
         try {
-            const response = await axios.get(`http://127.0.0.1:8000/api/blogs/show/${id}`, {
+            const response = await axios.get(`http://127.0.0.1:8000/api/admin/blogs/show/${id}`, {
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`
                 }
@@ -50,7 +50,7 @@ const UpdateBlog = () => {
         formData.append('uncategorized', uncategorized);
 
         try {
-            const response = await axios.post(`http://127.0.0.1:8000/api/blogs/update/${id}`, formData, {
+            const response = await axios.post(`http://127.0.0.1:8000/api/admin/blogs/update/${id}`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                     'Authorization': `Bearer ${localStorage.getItem('token')}`,

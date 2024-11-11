@@ -1,8 +1,6 @@
-// ProductList.js
 import React from 'react';
 
 const ProductList = ({ products, onEdit, onDelete }) => {
-    console.log(products)
     return (
         <ul>
             {products.map(product => (

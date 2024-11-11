@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { fetchBlogs } from '../../api/api';  // Əgər fetchBlogs API metodu daxil edilirsə
+import { fetchBlogs } from '../../api/api';  
 
 const BlogList = () => {
     const [blogs, setBlogs] = useState([]);
@@ -12,8 +12,8 @@ const BlogList = () => {
         // Blogları fetch etmək
         fetchBlogs()
           .then((res) => {
-            console.log(res);  // Fetch edilmiş blogları konsola yazdırın
-            setBlogs(res);  // Yeni məlumatla state-i yeniləyin
+            console.log(res);  // Fetch edilmiş blogları konsola yazdır
+            setBlogs(res);  
             setLoading(false);
           })
           .catch((err) => {
@@ -25,9 +25,9 @@ const BlogList = () => {
     const handleDelete = async (id) => {
         if (window.confirm("Bu blogu silmək istədiyinizdən əminsiniz?")) {
             try {
-                await axios.delete(`http://127.0.0.1:8000/api/blogs/${id}`, {
+                await axios.delete(`http://127.0.0.1:8000/api/admin/blogs/${id}`, {
                     headers: {
-                        'Authorization': `Bearer ${localStorage.getItem('token')}`  // Tokeni əlavə edin
+                        'Authorization': `Bearer ${localStorage.getItem('token')}`  
                     }
                 });
                 
