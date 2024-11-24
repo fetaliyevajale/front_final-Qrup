@@ -13,6 +13,13 @@ import UpdateBlog from './Blogs/UpdateBlog';
 import TeamForm from './Teams/TeamForm';
 import AdminTeams from "./Teams/AdminTeams";
 import TeamList from './Teams/TeamList';
+import CartForm from './Cart/CartForm';
+import CartList from "./Cart/CartList";
+import AdminCart from './Cart/AdminCart';
+import OrderForm from './Orders/OrderForm';
+import OrderList from './Orders/OrdersList';
+import AdminOrder from './Orders/AdminOrder';
+
 
 
 
@@ -36,6 +43,12 @@ export default function Admin() {
     <Route path="/team_form" element={<TeamForm />} />
     <Route path="/admin_teams" element={<AdminTeams />} /> 
     <Route path="/admin_teams_list" element={<TeamList />} />
+    <Route path="/cart" element={<CartForm />} />
+    <Route path="/cart_list" element={<CartList />} />
+    <Route path="/admin_cart" element={<AdminCart />} />
+    <Route path="/order_form" element={<OrderForm />} /> 
+    <Route path="/order_list" element={<OrderList />} />
+    <Route path="/admin_order" element={<AdminOrder />} />
     
 </Routes>
     </div>

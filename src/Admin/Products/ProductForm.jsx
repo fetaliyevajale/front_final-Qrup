@@ -23,25 +23,24 @@ const ProductForm = ({ onUpdate }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        try {
-            // localStorage-dan tokeni əldə et
-            const token = localStorage.getItem('token');
-            console.log('Token:', token);  
-            if (!token) {
-                setError('Token tapılmadı. Lütfən yenidən daxil olun.');
-                return;
-            }
+        // Tokeni yoxla. Əgər token yoxdursa, istifadəçiyə səhv mesajı göstər və formu dayandır.
+        const token = localStorage.getItem('token');
+        if (!token) {
+            setError('Token tapılmadı. Lütfən yenidən daxil olun.');
+            return;
+        }
 
+        try {
             const headers = {
                 'Authorization': `Bearer ${token}`,
                 'Content-Type': 'application/json',
             };
 
-            // API-yə sorğu göndəririk
+            // Məhsul yaratma sorğusunu göndər
             const response = await axios.post('http://127.0.0.1:8000/api/admin/products/store', productData, { headers });
             console.log(response.data.message);
 
-            // Formu təmizləyirik
+            // Uğurlu olduqda formu təmizlə
             setProductData({
                 name: '',
                 address: '',
@@ -51,19 +50,17 @@ const ProductForm = ({ onUpdate }) => {
                 bathrooms: ''
             });
 
-            onUpdate();  // Məhsul siyahısını yeniləmək üçün (əgər varsa)
-            setError(null);  // Əgər əvvəlki xətalar varsa, onları sıfırlayırıq
+            setError(null);  // Əvvəlki xətaları sıfırlayırıq
+            onUpdate();      // Məhsul siyahısını yeniləyir (əgər varsa)
 
         } catch (error) {
-            console.log(error); // Erroru daha yaxşı izah etmək üçün konsolda çap et
-            if (error.response?.status === 401) {
-                // Autentifikasiya xətası varsa, istifadəçini yenidən daxil olmağa məcbur edirik
-                setError('Autentifikasiya uğursuz oldu, zəhmət olmasa yenidən daxil olun.');
+            console.log('Xəta baş verdi:', error); 
+            // Sorğunun mövcud olub-olmamasını yoxlayırıq, boşdursa ümumi bir mesaj göstəririk
+            if (error.response) {
+                setError(error.response.data?.message || 'Xəta baş verdi. Lütfən yenidən cəhd edin.');
             } else {
-                // Başqa xətalar varsa, onları göstəririk
-                setError(error.response?.data?.message || 'Xəta baş verdi. Lütfən yenidən cəhd edin.');
+                setError('Şəbəkə problemi. Lütfən internet bağlantınızı yoxlayın.');
             }
-            console.error('Xəta:', error.response?.data || error.message);
         }
     };
 

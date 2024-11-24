@@ -14,7 +14,14 @@ const BlogForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
+
+        const token = localStorage.getItem('token');
+        if (!token) {
+            // Token yoxdursa, istifadəçini login səhifəsinə yönləndir
+            navigate('/login');
+            return;
+        }
+
         const formData = new FormData();
         formData.append('title', title);
         formData.append('content', content);
@@ -33,7 +40,7 @@ const BlogForm = () => {
             const response = await axios.post('http://127.0.0.1:8000/api/admin/blogs/store', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
-                    'Authorization': `Bearer ${localStorage.getItem('token')}`, 
+                    'Authorization': `Bearer ${token}`, 
                 },
             });
             setMessage(response.data.message); 
@@ -45,7 +52,11 @@ const BlogForm = () => {
             setUncategorized('');
             navigate('/admin/blogs_crud');
         } catch (error) {
-            setMessage('Xəta baş verdi: ' + (error.response?.data.message || 'Xəta')); 
+            if (error.response && error.response.data) {
+                setMessage('Xəta baş verdi: ' + (error.response.data.message || 'Xəta')); 
+            } else {
+                setMessage('Xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.');
+            }
         }
     };
 

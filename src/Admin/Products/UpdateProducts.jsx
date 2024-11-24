@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const UpdateProducts = ({ productId }) => {
+const UpdateProduct = ({ productId }) => {
     const [productData, setProductData] = useState({
         name: '',
         address: '',
@@ -11,6 +11,19 @@ const UpdateProducts = ({ productId }) => {
         bathrooms: ''
     });
 
+    useEffect(() => {
+        const fetchProductData = async () => {
+            try {
+                const response = await axios.get(`http://127.0.0.1:8000/api/products/${productId}`);
+                setProductData(response.data);
+            } catch (error) {
+                console.error('Məhsul məlumatları alınarkən xəta baş verdi:', error);
+            }
+        };
+
+        fetchProductData();
+    }, [productId]);
+
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setProductData({
@@ -18,7 +31,6 @@ const UpdateProducts = ({ productId }) => {
             [name]: value
         });
     };
-
 
     const handleUpdateProduct = async () => {
         try {
@@ -31,7 +43,6 @@ const UpdateProducts = ({ productId }) => {
 
             if (response.status === 200) {
                 console.log('Məhsul uğurla yeniləndi:', response.data);
-
             }
         } catch (error) {
             console.error("Məhsul yenilənərkən xəta baş verdi:", error);
@@ -88,4 +99,4 @@ const UpdateProducts = ({ productId }) => {
     );
 };
 
-export default UpdateProducts;
+export default UpdateProduct;

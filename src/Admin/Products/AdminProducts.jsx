@@ -2,55 +2,52 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ProductList from './ProductList';
 import ProductForm from './ProductForm';
-import { fetchProducts } from '../../api/api';
-
+import { fetchProducts } from '../../api/api'; // API-nin məhsulları çəkmə funksiyası
 
 const AdminProducts = () => {
-
-    console.log('test....')
-
-    const [products, setProducts] = useState([]); // Define products state
-    const [selectedProduct, setSelectedProduct] = useState(null); // Define selectedProduct state
-    const [loading, setLoading] = useState(true); // Define selectedProduct state
-
+    const [products, setProducts] = useState([]); // Məhsulları saxlamaq üçün vəziyyət
+    const [selectedProduct, setSelectedProduct] = useState(null); // Redaktə üçün seçilmiş məhsul
+    const [loading, setLoading] = useState(true); // Yüklənmə vəziyyəti
 
     useEffect(() => {
+        // Məhsulları çəkmək üçün API çağırışı
         fetchProducts()
-          .then((res) =>{
-            console.log(res)
-            setProducts(res)
+          .then((res) => {
+            setProducts(res.data); // Məhsulları vəziyyətə yazırıq
             setLoading(false);
           })
           .catch((err) => {
-            console.log("Error fetching blogs:", err);  // Log any errors
+            console.error("Məhsulları çəkməkdə səhv:", err);
             setLoading(false); 
           });
-        return () => {};
-      }, []);
+    }, []);
 
+    // Məhsulu yeniləmək üçün funksiya
     const handleUpdate = () => {
-        console.log('handleUpd')
-        // setSelectedProduct(null); 
+        setSelectedProduct(null); // Məhsul yeniləndikdən sonra seçilmiş məhsulu sıfırlayırıq
+        fetchProducts().then((res) => setProducts(res.data)); // Yenilənmiş məhsulları çəkirik
     };
 
+    // Redaktə etmək üçün məhsulu seçən funksiya
     const handleEdit = (product) => {
-        console.log('handleEdi')
-        // setSelectedProduct(product);
+        setSelectedProduct(product);
     };
 
+    // Məhsulu silmək üçün funksiya
     const handleDelete = (id) => {
-        console.log('handleDel')
-        // axios.delete(`http://127.0.0.1:8000/api/products/${id}`, {
-        //     headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}`  buranı mellim edib serhe alib oz kodlarin yapisdirdi  ccoooooooxxxxx naxaaqqqqqqqq }
-        // })
-        // .then(() => fetchProducts()) 
-        // .catch(error => console.error(error));
+        axios.delete(`http://127.0.0.1:8000/api/products/${id}`, {
+            headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
+        })
+        .then(() => fetchProducts().then((res) => setProducts(res.data)))
+        .catch(error => console.error("Məhsulu silməkdə səhv:", error));
     };
 
     return (
         <div>
             <h1>Admin - Məhsullar</h1>
-            {/* <ProductForm product={selectedProduct} onUpdate={handleUpdate} /> */}
+            {/* Məhsul formu */}
+            <ProductForm product={selectedProduct} onUpdate={handleUpdate} />
+            {/* Məhsulların siyahısı */}
             <ProductList products={products} onEdit={handleEdit} onDelete={handleDelete} />
         </div>
     );
