@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Link  } from "react-router-dom";
+import { Link } from "react-router-dom";
 export default function Profil() {
   const [profiles, setProfiles] = useState([]);
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,7 +21,6 @@ export default function Profil() {
     fetchData();
   }, []);
 
-
   return (
     <div className="containerAbout">
       <div className="aboutPost">
@@ -31,17 +29,20 @@ export default function Profil() {
             <img src={`.${profil.image}`} alt="" />
             <h5>{profil.name}</h5>
             <span>{profil.titles}</span>
-
-        
           </div>
         ))}
       </div>
       <div className="loremIpsum">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Biz müştərilərimiz üçün hər zaman etibarlı xidmətlər təqdim edir,
+          onların güvənini qazanmağı prioritet hesab edirik. Peşəkar
+          komandamızın köməyi ilə istənilən çətinliyi birlikdə aşmağa hazırıq.
         </p>
-        <button><Link style={{color:'black'}}  to="/pages">See More</Link></button>
+        <button>
+          <Link style={{ color: "black" }} to="/pages">
+            Ətraflı Baxın
+          </Link>
+        </button>
       </div>
     </div>
   );

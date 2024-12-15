@@ -3,19 +3,20 @@ import React from "react";
 export default function NotFound() {
   return (
     <div className="container">
-      <div  className="centerNot">
+      <div className="centerNot">
         <div className="notLeft">
           <div className="tops">
             <h2>
-              Oops, Can’t Load this Page, Please Check Your Connection and
-              Reload this Page
+              Bu səhifəni yükləmək mümkün deyil, əlaqənizi yoxlayın və Bu
+              Səhifəni yenidən yükləyin
             </h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Zəhmət olmasa internet bağlantınızı yoxlayın və səhifəni yenidən
+              açmağa çalışın. Problemin davam etməsi halında, texniki dəstəyə
+              müraciət edə bilərsiniz.
             </p>
           </div>
-          <button type="submit">Back to Homepage</button>
+          <button type="submit">Əsas səhifəyə qayıt</button>
         </div>
         <div className="notRight">
           <img src="/imagesFile/image9.jpg" alt="" />

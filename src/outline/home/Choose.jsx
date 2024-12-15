@@ -23,15 +23,20 @@ export default function Section() {
   return (
     <div className="choose">
       <div className="chooseLeft">
-      <div className="dolor">
-      <h3>Why Choose Us for Your House Needs?</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
+        <div className="dolor">
+          <h3>Ev ehtiyaclarınız üçün niyə bizi seçməlisiniz?</h3>
+          <p>
+            Ev ehtiyaclarınız üçün niyə bizi seçməlisiniz? Bizim mükəmməl
+            xidmətlərimizlə həyatınızı daha asan və rahat edə biləcəyiniz
+            üstünlüklər təqdim edirik. Keyfiyyətli və səmərəli həllərimizlə hər
+            zaman yanınızdayıq
+          </p>
+        </div>
         {chooses?.map((choose, index) => (
           <div className="dataKey" key={index}>
             <div className="box">
               <div className="ground">
-                <i className="fa-solid fa-check" style={{color:"#FFF"}}></i>
+                <i className="fa-solid fa-check" style={{ color: "#FFF" }}></i>
               </div>
               <div className="title">
                 <h4>{choose.title}</h4>

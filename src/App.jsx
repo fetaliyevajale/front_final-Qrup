@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route, NavLink, Routes, useLocation } from "react-router-dom";
+import { Route, NavLink, Routes, useLocation, Navigate } from "react-router-dom";
 import Home from "./outline/home/Home";
 import Listing from "./outline/listing/Listing";
 import Services from "./outline/servics/Services";
@@ -16,7 +16,22 @@ import NotFound from "./outline/pages/NotFound";
 import Sidebar from "./Sidebar";
 import Login from "./Admin/Login/Login";
 import Admin from "./Admin/Admin";
-import BlogForm from "./Admin/Blogs/BlogForm";
+
+// PrivateRoute komponenti
+function PrivateRoute({ children, path }) {
+  const isAuthenticated = localStorage.getItem("token");
+  const isAdmin = localStorage.getItem("role") === "admin";
+
+  if (!isAuthenticated) {
+    return <Navigate to="/" replace />;
+  }
+
+  if (path.startsWith("/admin") && !isAdmin) {
+    // return <Navigate to="/home" replace />;
+  }
+
+  return children;
+}
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,41 +41,37 @@ function App() {
     setIsOpen(!isOpen);
   };
 
-  // Check if the current path is the login or admin page
   const isLoginPage = location.pathname === "/";
-  const isAdminPage = location.pathname.startsWith("/admin");
+  const isAdminPage = location.pathname.includes("/admin");
 
   return (
     <div>
-      {/* Only render Routes for Login and Admin */}
       <Routes>
         <Route path="/" element={<Login />} />
-        
-        {/* Admin marşrutları */}
-        <Route path="/admin/*" element={<Admin />} /> {/* Admin komponentini istifadə edin */}
-        
+        <Route
+          path="/admin/*"
+          element={
+            <PrivateRoute path="/admin/*">
+              <Admin />
+            </PrivateRoute>
+          }
+        />
         {/* Digər marşrutlar */}
-        {!isLoginPage && !isAdminPage && (
-          <>
-            <Route path="/home" element={<Home />} />
-            <Route path="/listing" element={<Listing />} />
-            <Route path="/details/:id" element={<ListingDetails />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/singleBlog/:id" element={<SingleBlog />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/pages" element={<Pages />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/help-center" element={<HelpCenter />} />
-            {/* 404 Page */}
-            <Route path="*" element={<NotFound />} />
-            
-          </>
-        )}
+        <Route path="/home" element={<Home />} />
+        <Route path="/listing" element={<Listing />} />
+        <Route path="/details/:id" element={<ListingDetails />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/singleBlog/:id" element={<SingleBlog />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/pages" element={<Pages />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/help-center" element={<HelpCenter />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
-      {/* Only display Sidebar, Navbar, and Fotter if not on the login or admin page */}
+      {/* Sidebar və Fotter */}
       {!isLoginPage && !isAdminPage && (
         <>
           <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
@@ -71,28 +82,45 @@ function App() {
 
             <div className="headers">
               <header>
-                <NavLink style={{ color: "black" }} to="/home">Home</NavLink>
-                <NavLink style={{ color: "black" }} to="/listing">Listing</NavLink>
-                <NavLink style={{ color: "black" }} to="/services">Services</NavLink>
-                <NavLink style={{ color: "black" }} to="/blog">Blog</NavLink>
-                <NavLink style={{ color: "black" }} to="/about">About</NavLink>
-                <NavLink style={{ color: "black" }} to="/contact">Contact Us</NavLink>
+                <NavLink style={{ color: "black" }} to="/home">
+                Ev
+                </NavLink>
+                <NavLink style={{ color: "black" }} to="/listing">
+                Siyahı
+                </NavLink>
+                <NavLink style={{ color: "black" }} to="/services">
+                Xidmətlər
+                </NavLink>
+                <NavLink style={{ color: "black" }} to="/blog">
+                Bloq
+                </NavLink>
+                <NavLink style={{ color: "black" }} to="/about">
+                Haqqında
+                </NavLink>
+                <NavLink style={{ color: "black" }} to="/contact">
+                Bizimlə əlaqə saxlayın
+                </NavLink>
 
                 <div className="custom-dropdown">
-                  <button className="dropdown-toggle">Pages</button>
+                  <button className="dropdown-toggle">Səhifələr</button>
                   <ul className="dropdown-menu">
-                    <li><NavLink to="/help-center">Help Center</NavLink></li>
-                    <li><NavLink to="/gallery">Gallery</NavLink></li>
-                    <li><NavLink to="*">404 Page</NavLink></li>
+                    <li>
+                      <NavLink to="/help-center">Yardım Mərkəzi</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/gallery">Qalereya</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="*">404 Səhifə</NavLink>
+                    </li>
                   </ul>
                 </div>
               </header>
               <i className="fa-solid fa-bars" onClick={toggleSidebar}></i>
-              <button>Get a Quote</button>
+              <button>Sitat əldə edin</button>
             </div>
           </div>
 
-          {/* Only display Fotter if not on the login or admin page */}
           <Fotter />
         </>
       )}

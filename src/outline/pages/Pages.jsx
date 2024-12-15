@@ -1,28 +1,29 @@
-import React from 'react'
-import HeroPages from './HeroPages'
-import Box from '../home/Box'
+import React from "react";
+import HeroPages from "./HeroPages";
+import Box from "../home/Box";
 export default function Pages() {
   return (
-    <div className='pagesContainer'>
-            <div className="heroBlogs">
-        <h2>Our Team</h2>
+    <div className="pagesContainer">
+      <div className="heroBlogs">
+        <h2>Bizim Komanda</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Bizim güclü və peşəkar komandamız, müştərilərimizin tələblərinə uyğun
+          ən yaxşı xidmətləri təqdim edir və onların ehtiyaclarını qarşılayır.
         </p>
       </div>
 
-
-      <HeroPages/>
+      <HeroPages />
 
       <div className="step">
-        <h3>What Says from Our Happy Customers</h3>
+        <h3>Məmnun Müştərilərimiz Nə Deyir</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod <br /> tempor incididunt ut labore et dolore magna aliqua.
+          Müştərilərimiz bizim xidmətlərimizdən çox razıdırlar və bu, onların
+          rəylərində aydın şəkildə görünür. <br /> Bizim güclü müştəri
+          məmnuniyyəti strategiyamız müştərilərimizin gözləntilərini tam şəkildə
+          ödəməyə imkan verir.
         </p>
       </div>
-      <Box/>
+      <Box />
     </div>
-  )
+  );
 }

@@ -2,18 +2,17 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ProductList from './ProductList';
 import ProductForm from './ProductForm';
-import { fetchProducts } from '../../api/api'; // API-nin məhsulları çəkmə funksiyası
+import { fetchProducts } from '../../api/api';
 
 const AdminProducts = () => {
-    const [products, setProducts] = useState([]); // Məhsulları saxlamaq üçün vəziyyət
-    const [selectedProduct, setSelectedProduct] = useState(null); // Redaktə üçün seçilmiş məhsul
-    const [loading, setLoading] = useState(true); // Yüklənmə vəziyyəti
+    const [products, setProducts] = useState([]);
+    const [selectedProduct, setSelectedProduct] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // Məhsulları çəkmək üçün API çağırışı
         fetchProducts()
           .then((res) => {
-            setProducts(res.data); // Məhsulları vəziyyətə yazırıq
+            setProducts(res.data); 
             setLoading(false);
           })
           .catch((err) => {
@@ -23,9 +22,9 @@ const AdminProducts = () => {
     }, []);
 
     // Məhsulu yeniləmək üçün funksiya
-    const handleUpdate = () => {
-        setSelectedProduct(null); // Məhsul yeniləndikdən sonra seçilmiş məhsulu sıfırlayırıq
-        fetchProducts().then((res) => setProducts(res.data)); // Yenilənmiş məhsulları çəkirik
+    const handleUpdate = (newProduct) => {
+        setSelectedProduct(null);
+        setProducts(prevProducts => [...prevProducts, newProduct]); // Yeni məhsulu əlavə edirik
     };
 
     // Redaktə etmək üçün məhsulu seçən funksiya
@@ -46,9 +45,18 @@ const AdminProducts = () => {
         <div>
             <h1>Admin - Məhsullar</h1>
             {/* Məhsul formu */}
-            <ProductForm product={selectedProduct} onUpdate={handleUpdate} />
+            <ProductForm onAdd={handleUpdate} />  {/* `onAdd` props yeni məhsulu qəbul edir */}
             {/* Məhsulların siyahısı */}
-            <ProductList products={products} onEdit={handleEdit} onDelete={handleDelete} />
+            <div className="flexWrap">
+                {products?.map((product, index) => (
+                    <ProductList 
+                        key={index} 
+                        product={product} 
+                        onEdit={handleEdit} 
+                        onDelete={handleDelete} 
+                    />
+                ))}
+            </div>
         </div>
     );
 };

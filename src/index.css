@@ -168,6 +168,56 @@ header {
   outline: none;
 }
 
+/*WhyChooseUs*/
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f2f2f2;
+}
+
+button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+form {
+  margin-top: 20px;
+}
+
+
+
+
+
+
 
 
 #adminDashboard {
@@ -569,6 +619,28 @@ button:hover {
 
 
 
+.productshome{
+width: 500px;
+ margin-left: 370px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .dropdown-toggle:hover {
   background-color: #dcdcdc;
@@ -927,6 +999,8 @@ button:hover {
   display: flex;
   gap: 80px;
 }
+
+
 .leftCont {
   margin-top: 50px;
   width: 70%;

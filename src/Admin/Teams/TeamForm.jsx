@@ -25,7 +25,7 @@ const TeamForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault(); 
         const method = isEditing ? 'PUT' : 'POST'; ``
-        const url = isEditing ? `http://127.0.0.1:8000/api/team/${id}` : 'http://127.0.0.1:8000/api/team';
+        const url = isEditing ? `http://127.0.0.1:8000/api/team/${id}` : 'http://127.0.0.1:8000/api/admin/team/store';
 
         await fetch(url, {
             method,

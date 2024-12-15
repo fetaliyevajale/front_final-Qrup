@@ -24,10 +24,14 @@ export default function Gallery() {
 
   return (
     <div>
-        <div className="heroBlogs">
- <h2>Our Gallery</h2>
- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>   
-</div>
+      <div className="heroBlogs">
+        <h2>Bizim Qalery</h2>
+        <p>
+          Burada, müxtəlif əmlak variantları haqqında daha çox məlumat əldə edə
+          və şəkillərimizə baxa bilərsiniz. Mülklərin keyfiyyəti və vizual
+          təcrübəsi ilə bağlı ətraflı görsellər təqdim olunur.
+        </p>
+      </div>
       <div className="flexWrap">
         {houses?.map((house, index) => (
           <div className="cols" key={index}>
@@ -35,7 +39,7 @@ export default function Gallery() {
           </div>
         ))}
       </div>
-      <LeftGallery/>
+      <LeftGallery />
     </div>
   );
 }

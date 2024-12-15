@@ -22,10 +22,11 @@ export default function HeroSection() {
   console.log(rights);
   return (
     <div className="rightCont">
-      <h3>Other Property</h3>
+      <h3>Digər Əmlak</h3>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt
+        Burada, müxtəlif əmlak variantları haqqında məlumat tapa bilərsiniz.
+        Mülklərin keyfiyyəti və yerləşməsi ilə bağlı ətraflı məlumatlar təqdim
+        olunur.
       </p>
       <div
         className="flexs"

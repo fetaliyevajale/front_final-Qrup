@@ -4,25 +4,15 @@ export default function LoremBlog() {
   return (
     <div className="contentBlog">
       <div className="topBlog">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-          dolor sit amet, consectetur adipiscing.
+      <p>
+          Bloq yazılarımızda sizə son trendlər, faydalı məsləhətlər və komandamızın
+          fərdi təcrübələrindən yararlanaraq təqdim etdiyimiz maraqlı mövzularla tanış olacaqsınız.
+          Məqsədimiz oxucularımız üçün dəyərli və praktiki məlumatlar çatdırmaqdır.
         </p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-          dolor sit amet, consectetur adipiscing{" "}
+          Fəaliyyət göstərdiyimiz sahələrdə innovasiyaları izləyərək, ən yaxşı təcrübələri
+          paylaşırıq. Sizi həm məlumatlandırmaq, həm də motivasiya etmək bizim əsas
+          prioritetlərimizdən biridir.
         </p>
       </div>
       <div className="centerBlog">
@@ -34,25 +24,15 @@ export default function LoremBlog() {
         </div>
       </div>
       <div className="topBlog">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-          dolor sit amet, consectetur adipiscing{" "}
+      <p>
+          Hər yazıda mütəxəssis fikirləri, praktik tövsiyələr və real təcrübələrə əsaslanan
+          məlumatlar təqdim olunur. Bloqlarımız sizə öz bilik və bacarıqlarınızı inkişaf etdirməkdə
+          kömək edəcək.
         </p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-          dolor sit amet, consectetur adipiscing .
+          Biz oxucularımızın ehtiyaclarına cavab verən məzmun yaratmağa çalışırıq.
+          Fərqli perspektivlərdən yanaşaraq hər bir mövzunu ətraflı araşdırır və
+          təqdim edirik. 
         </p>
       </div>
     </div>

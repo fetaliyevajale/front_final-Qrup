@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const BlogForm = () => {
     const [title, setTitle] = useState('');
@@ -9,8 +9,23 @@ const BlogForm = () => {
     const [calendarIcon, setCalendarIcon] = useState(null);
     const [folderIcon, setFolderIcon] = useState(null);
     const [uncategorized, setUncategorized] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('');  // Seçilən kateqoriya
     const [message, setMessage] = useState('');
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
+
+    // Kateqoriyalar siyahısı (Statik)
+    const categories = [
+        { id: 1, name: 'Satış' },
+        { id: 2, name: 'Kirayə' },
+        { id: 3, name: 'Yeni Tikili ' },
+        { id: 4, name: 'Bahalı Evlər' },
+        { id: 5, name: 'Ucuz Evlər' },
+        { id: 6, name: 'Baxım tələb edən evlər ' },
+        { id: 7, name: 'Təbii Gözəlliklərə Yaxın Evlər' },
+        { id: 8, name: 'Köhnə Evlər' },
+        { id: 9, name: 'Villa və Bağ Evləri' },
+        { id: 10, name: 'Tək Yerləşən Evlər' }
+    ];
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -29,31 +44,32 @@ const BlogForm = () => {
             formData.append('image', image);
         }
         if (calendarIcon) {
-            formData.append('calendar_icon', calendarIcon); 
+            formData.append('calendar_icon', calendarIcon);
         }
         if (folderIcon) {
             formData.append('folder_icon', folderIcon);
         }
-        formData.append('uncategorized', uncategorized);
+        formData.append('category_id', selectedCategory);  // Seçilmiş kateqoriya
 
         try {
             const response = await axios.post('http://127.0.0.1:8000/api/admin/blogs/store', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
-                    'Authorization': `Bearer ${token}`, 
+                    'Authorization': `Bearer ${token}`,
                 },
             });
-            setMessage(response.data.message); 
+            setMessage(response.data.message);
             setTitle('');
             setContent('');
             setImage(null);
             setCalendarIcon(null);
             setFolderIcon(null);
             setUncategorized('');
+            setSelectedCategory('');
             navigate('/admin/blogs_crud');
         } catch (error) {
             if (error.response && error.response.data) {
-                setMessage('Xəta baş verdi: ' + (error.response.data.message || 'Xəta')); 
+                setMessage('Xəta baş verdi: ' + (error.response.data.message || 'Xəta'));
             } else {
                 setMessage('Xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.');
             }
@@ -93,23 +109,30 @@ const BlogForm = () => {
                     <label>Kalendar İkonu:</label>
                     <input
                         type="file"
-                        onChange={(e) => setCalendarIcon(e.target.files[0])} 
+                        onChange={(e) => setCalendarIcon(e.target.files[0])}
                     />
                 </div>
                 <div>
                     <label>Qovluq İkonu:</label>
                     <input
                         type="file"
-                        onChange={(e) => setFolderIcon(e.target.files[0])} 
+                        onChange={(e) => setFolderIcon(e.target.files[0])}
                     />
                 </div>
                 <div>
                     <label>Kateqoriya:</label>
-                    <input
-                        type="text"
-                        value={uncategorized}
-                        onChange={(e) => setUncategorized(e.target.value)}
-                    />
+                    <select
+                        value={selectedCategory}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                        required
+                    >
+                        <option value="">Kateqoriya seçin</option>
+                        {categories.map((category) => (
+                            <option key={category.id} value={category.id}>
+                                {category.name}
+                            </option>
+                        ))}
+                    </select>
                 </div>
                 <button type="submit">Əlavə Et</button>
             </form>

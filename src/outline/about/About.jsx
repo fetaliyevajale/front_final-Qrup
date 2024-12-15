@@ -5,21 +5,27 @@ export default function About() {
   return (
     <div className="container">
       <div className="titles">
-        <h3>About Us</h3>
+        <h3>Haqqımızda</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Biz, daşınmaz əmlak sektorunda illərdir fəaliyyət göstərən,
+          müştərilərinə keyfiyyətli və peşəkar xidmətlər təqdim edən bir
+          şirkətik. Şirkətimiz, müştərilərinə etibarlı və yenilikçi həllər
+          təqdim etmək məqsədilə, sektorda liderliyini qorumaq üçün daim özünü
+          inkişaf etdirməkdədir. Bizim məqsədimiz, hər zaman müştərilərimizin
+          ehtiyaclarını anlamaq və onların təklif etdiyimiz xidmətlərdən ən
+          yüksək səviyyədə faydalanmalarını təmin etməkdir. Təcrübəmiz sayəsində
+          daşınmaz əmlak bazarında güvənilən bir tərəfdaş kimi tanınırıq.
         </p>
       </div>
       <div className="step">
         <h3>
-          Over 12+ Years Experience
+          12 ildən artıq təcrübə ilə
           <br />
-          in Real Estate Services
+          Daşınmaz əmlak xidmətləri sahəsində liderik
         </h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod <br /> tempor incididunt ut labore et dolore magna aliqua.
+          Biz müştərilərimizə əmlak sahəsində ən yaxşı həllər təqdim etmək üçün
+          geniş təcrübəmizdən istifadə edirik.
         </p>
       </div>
 
@@ -29,31 +35,30 @@ export default function About() {
 
       <div className="about">
         <div className="visions">
-          <h4>Our Vision</h4>
+          <h4>Bizim Vizyonumuz</h4>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Əmlak bazarında yenilikçi həllər təqdim edərək, müştərilərimiz üçün
+            dəyər yaratmağı hədəfləyirik.
           </p>
         </div>
 
         <div className="missions">
-          <h4>Our Mission</h4>
+          <h4>Bizim Missiyamız</h4>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Şirkətimizin missiyası, müştərilərimizin ehtiyaclarını yüksək
+            keyfiyyətlə ödəmək, təhlükəsiz və sərfəli daşınmaz əmlak
+            alqı-satqısı təmin etməkdir. Biz hər zaman müştərilərimizin
+            təhlükəsizliyini və məmnuniyyətini ön planda tuturuq.
           </p>
         </div>
       </div>
 
       <div className="step">
-        <h3>Our Trusted Partner</h3>
+        <h3>Etibarlı Partnyorlarımız</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod <br /> tempor incididunt ut labore et dolore magna aliqua.
+          Bizim uğurumuzda etibarlı partnyorlarımızın böyük rolu var. Birlikdə
+          çalışdığımız şirkətlərlə yüksək keyfiyyətli nəticələr əldə edirik və
+          müştərilərimizə ən yaxşı xidmətləri təqdim edirik.
         </p>
       </div>
 
@@ -63,16 +68,17 @@ export default function About() {
         <img src="/imagesFile/Frame (2).jpg" alt="" />
         <img src="/imagesFile/Frame (3).jpg" alt="" />
       </div>
-      
+
       <History />
       <div className="step">
-        <h3>Our Agent List</h3>
+        <h3>Agentlərimizin Siyahısı</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod <br /> tempor incididunt ut labore et dolore magna aliqua.
+          Bizim peşəkar agentlərimiz müştərilərimizin ehtiyaclarına ən uyğun
+          həllər təqdim etmək üçün təcrübəli və səriştəlidirlər. Hər bir
+          agentimiz, müştəriyə ən yaxşı xidmət göstərmək üçün çalışır.
         </p>
       </div>
-<Profil/>
+      <Profil />
     </div>
   );
 }

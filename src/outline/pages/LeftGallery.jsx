@@ -37,12 +37,12 @@ export default function LeftGallery() {
             <div className="icons">
               <div className="solid">
                 <i className="fa-regular fa-calendar" style={{ color: "#666" }}></i>
-                <span style={{ color: "#666" }}>18 June 2022</span>
+                <span style={{ color: "#666" }}>18 iyun 2022-ci il</span>
               </div>
 
               <div className="solid">
                 <i className="fa-solid fa-folder-open" style={{ color: "#666" }}></i>
-                <span style={{ color: "#666" }}>Uncategorized</span>
+                <span style={{ color: "#666" }}>Kateqoriyasız</span>
               </div>
             </div>
 

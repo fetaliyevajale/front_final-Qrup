@@ -4,11 +4,12 @@ export default function Location() {
   return (
     <div className="local">
       <div className="ttt">
-        <h3>Locations</h3>
+        <h3>Ərazilər</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation.
+          Bu ərazilər geniş, sakit və yaşamaq üçün ideal şəraitə malikdir.
+          Məkanın müasir infrastrukturu və əlverişli yerləşməsi, burada
+          yaşayanlara rahat və keyfiyyətli həyat təmin edir. Hər kəsin
+          ehtiyaclarına uyğun müxtəlif xidmətlər və imkanlar mövcuddur.
         </p>
       </div>
 

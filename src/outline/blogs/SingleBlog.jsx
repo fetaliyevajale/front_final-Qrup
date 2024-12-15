@@ -14,7 +14,7 @@ const SingleBlog = () => {
         const result = await response.json();
         setData(result.blogs);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error("Data çəkməkdə xəta baş verdi:", error);
       }
     };
     getData();
@@ -28,8 +28,7 @@ const SingleBlog = () => {
         <div className="titles">
           <h3>{product?.title}</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Hər bir insanın həyatında qarşılaşdığı unikal təcrübələr vardır. Bu yazıda, həyatımıza təsir edən əhəmiyyətli məsələləri və onların bizim gündəlik həyatımıza necə təsir etdiyini araşdırırıq.
           </p>
         </div>
         <img src={`.${product?.image}`} alt="" />

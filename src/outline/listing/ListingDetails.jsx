@@ -21,8 +21,9 @@ const ListingDetails = () => {
       <div className="productName">
         <h2>{product?.name}</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Bu əmlak geniş həyəti və müasir dizaynı ilə rahat və keyfiyyətli bir
+          həyat təmin edir. Otaqların funksional quruluşu və ailənizin
+          ehtiyaclarını qarşılamağa yönəlmiş xüsusiyyətləri ilə diqqət çəkir.
         </p>
       </div>
       <div className="centerContainer">
@@ -38,10 +39,9 @@ const ListingDetails = () => {
       <div className="text">
         <div className="leftText">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Bu mülk geniş həyəti, rahat yataq otaqları və modern mətbəxi ilə
+            ideal yaşayış təklif edir. Evinizdə komfort və keyfiyyəti hiss edin.
           </p>
-
           <div className="icons">
             <i className="fa-solid fa-location-dot"></i>
             <span>{product?.location}</span>
@@ -64,16 +64,14 @@ const ListingDetails = () => {
         </div>
         <div className="rightText">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip.
+            Əmlakın qiyməti və əlavə xüsusiyyətləri haqqında daha çox məlumat
+            əldə edin. Bu, sizin üçün ideal ev ola bilər.
           </p>
 
           <div className="btnDiv">
             <h3>{product?.price}</h3>
 
-            <button>Reqeuest Visit Now!</button>
+            <button>İndi Ziyarət Edin!</button>
           </div>
         </div>
       </div>

@@ -1,29 +1,51 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const ProductForm = ({ onUpdate }) => {
+const ProductForm = ({ product, onUpdate }) => {
     const [productData, setProductData] = useState({
         name: '',
         address: '',
         price: '',
         size: '',
         bedrooms: '',
-        bathrooms: ''
+        bathrooms: '',
+        image: null
     });
-    const [error, setError] = useState(null);  // Xəta mesajlarını saxlamaq üçün
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        if (product) {
+            setProductData({
+                name: product.name,
+                address: product.address,
+                price: product.price,
+                size: product.size,
+                bedrooms: product.bedrooms,
+                bathrooms: product.bathrooms,
+                image: null
+            });
+        }
+    }, [product]);
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
-        setProductData({
-            ...productData,
-            [name]: value
-        });
+        const { name, value, type, files } = e.target;
+
+        if (type === 'file') {
+            setProductData({
+                ...productData,
+                image: files[0]
+            });
+        } else {
+            setProductData({
+                ...productData,
+                [name]: value
+            });
+        }
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // Tokeni yoxla. Əgər token yoxdursa, istifadəçiyə səhv mesajı göstər və formu dayandır.
         const token = localStorage.getItem('token');
         if (!token) {
             setError('Token tapılmadı. Lütfən yenidən daxil olun.');
@@ -31,31 +53,38 @@ const ProductForm = ({ onUpdate }) => {
         }
 
         try {
+            const formData = new FormData();
+            Object.keys(productData).forEach((key) => {
+                formData.append(key, productData[key]);
+            });
+
             const headers = {
                 'Authorization': `Bearer ${token}`,
-                'Content-Type': 'application/json',
+                'Content-Type': 'multipart/form-data',
             };
 
-            // Məhsul yaratma sorğusunu göndər
-            const response = await axios.post('http://127.0.0.1:8000/api/admin/products/store', productData, { headers });
+            const response = await axios.post('http://127.0.0.1:8000/api/admin/products/store', formData, { headers });
+
             console.log(response.data.message);
 
-            // Uğurlu olduqda formu təmizlə
+            if (response.data.product) {
+                // Yeni məhsulu HeroSection-a göndəririk
+                onUpdate(response.data.product);
+            }
+
             setProductData({
                 name: '',
                 address: '',
                 price: '',
                 size: '',
                 bedrooms: '',
-                bathrooms: ''
+                bathrooms: '',
+                image: null
             });
 
-            setError(null);  // Əvvəlki xətaları sıfırlayırıq
-            onUpdate();      // Məhsul siyahısını yeniləyir (əgər varsa)
-
+            setError(null);
         } catch (error) {
-            console.log('Xəta baş verdi:', error); 
-            // Sorğunun mövcud olub-olmamasını yoxlayırıq, boşdursa ümumi bir mesaj göstəririk
+            console.log('Xəta baş verdi:', error);
             if (error.response) {
                 setError(error.response.data?.message || 'Xəta baş verdi. Lütfən yenidən cəhd edin.');
             } else {
@@ -66,11 +95,10 @@ const ProductForm = ({ onUpdate }) => {
 
     return (
         <div className="product-form">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} encType="multipart/form-data">
                 <h2>Yeni Məhsul Əlavə Et</h2>
-                {error && <p style={{ color: 'red' }}>{error}</p>} {/* Xətanı göstərmək üçün */}
+                {error && <p style={{ color: 'red' }}>{error}</p>}
 
-                {/* Məhsul adı */}
                 <div className="form-group">
                     <label htmlFor="name">Məhsul adı</label>
                     <input
@@ -79,85 +107,82 @@ const ProductForm = ({ onUpdate }) => {
                         value={productData.name}
                         onChange={handleChange}
                         placeholder="Məhsul adı"
-                        maxLength="255"
                         required
                     />
                 </div>
 
-                {/* Məhsul ünvanı */}
                 <div className="form-group">
-                    <label htmlFor="address">Məhsul Ünvanı</label>
+                    <label htmlFor="address">Ünvan</label>
                     <input
                         type="text"
                         name="address"
                         value={productData.address}
                         onChange={handleChange}
-                        placeholder="Məhsul ünvanı"
-                        maxLength="255"
+                        placeholder="Məhsulun ünvanı"
                         required
                     />
                 </div>
 
-                {/* Məhsul qiyməti */}
                 <div className="form-group">
-                    <label htmlFor="price">Məhsul Qiyməti</label>
+                    <label htmlFor="price">Qiymət</label>
                     <input
                         type="number"
                         name="price"
                         value={productData.price}
                         onChange={handleChange}
-                        placeholder="Məhsul qiyməti"
-                        step="0.01"
-                        min="0"
+                        placeholder="Məhsulun qiyməti"
                         required
                     />
                 </div>
 
-                {/* Ölçü (kv.ft.) */}
                 <div className="form-group">
-                    <label htmlFor="size">Ölçü (kv.ft.)</label>
+                    <label htmlFor="size">Ölçü</label>
                     <input
-                        type="number"
+                        type="text"
                         name="size"
                         value={productData.size}
                         onChange={handleChange}
-                        placeholder="Ölçü"
-                        min="0"
+                        placeholder="Məhsulun ölçüsü"
                         required
                     />
                 </div>
 
-                {/* Yataq otağı sayı */}
                 <div className="form-group">
-                    <label htmlFor="bedrooms">Yataq Otağı Sayı</label>
+                    <label htmlFor="bedrooms">Yataq otaqları</label>
                     <input
                         type="number"
                         name="bedrooms"
                         value={productData.bedrooms}
                         onChange={handleChange}
-                        placeholder="Yataq otağı sayı"
-                        min="0"
+                        placeholder="Yataq otaqları sayı"
                         required
                     />
                 </div>
 
-                {/* Hamam otağı sayı */}
                 <div className="form-group">
-                    <label htmlFor="bathrooms">Hamam Otağı Sayı</label>
+                    <label htmlFor="bathrooms">Banyolar</label>
                     <input
                         type="number"
                         name="bathrooms"
                         value={productData.bathrooms}
                         onChange={handleChange}
-                        placeholder="Hamam otağı sayı"
-                        min="0"
+                        placeholder="Banyoların sayı"
                         required
                     />
                 </div>
 
-                <button type="submit" className="submit-button">
-                    Məhsulu Əlavə Et
-                </button>
+                <div className="form-group">
+                    <label htmlFor="image">Şəkil</label>
+                    <input
+                        type="file"
+                        name="image"
+                        onChange={handleChange}
+                        accept="image/*"
+                        required
+                    />
+                </div>
+
+                <button type="submit">Məhsulu əlavə et</button>
             </form>
         </div>
     );
