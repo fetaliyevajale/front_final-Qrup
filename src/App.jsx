@@ -83,7 +83,7 @@ function App() {
             <div className="headers">
               <header>
                 <NavLink style={{ color: "black" }} to="/home">
-                Ev
+                Ana səhifə
                 </NavLink>
                 <NavLink style={{ color: "black" }} to="/listing">
                 Siyahı

@@ -34,14 +34,14 @@ export default function Details() {
               <div className="ground">
                 <i className="fa-solid fa-check" style={{ color: "#FFF" }}></i>
               </div>
-              <span>Açıq Mətbəx</span>
+              <span>Mətbəx</span>
             </div>
 
             <div className="boxGround">
               <div className="ground">
                 <i className="fa-solid fa-check" style={{ color: "#FFF" }}></i>
               </div>
-              <span>Saxlama vahidləri</span>
+              <span>Yaddaş</span>
             </div>
           </div>
           <div className="divBox">
@@ -49,7 +49,7 @@ export default function Details() {
               <div className="ground">
                 <i className="fa-solid fa-check" style={{ color: "#FFF" }}></i>
               </div>
-              <span>- Ev heyvanlarınız üçün uyğun mühit!</span>
+              <span>Heyvanlar</span>
             </div>
 
             <div className="boxGround">
@@ -63,7 +63,7 @@ export default function Details() {
               <div className="ground">
                 <i className="fa-solid fa-check" style={{ color: "#FFF" }}></i>
               </div>
-              <span>Ailəniz üçün rahat və geniş otaq!</span>
+              <span>Otaqlar</span>
             </div>
 
             <div className="boxGround">
@@ -85,7 +85,7 @@ export default function Details() {
               <div className="ground">
                 <i className="fa-solid fa-check" style={{ color: "#FFF" }}></i>
               </div>
-              <span>Fitnes mərkəzi</span>
+              <span>Fitnes</span>
             </div>
 
             <div className="boxGround">
@@ -107,7 +107,7 @@ export default function Details() {
               <div className="ground">
                 <i className="fa-solid fa-check" style={{ color: "#FFF" }}></i>
               </div>
-              <span>Üzgüçülük hovuzu</span>
+              <span>Üzgüçülük</span>
             </div>
 
             <div className="boxGround">
@@ -121,7 +121,7 @@ export default function Details() {
               <div className="ground">
                 <i className="fa-solid fa-check" style={{ color: "#FFF" }}></i>
               </div>
-              <span>Futbol Meydanı</span>
+              <span>Futbol</span>
             </div>
 
             <div className="boxGround">

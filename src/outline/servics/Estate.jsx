@@ -25,28 +25,28 @@ export default function Estate() {
               <div className="ground">
                 <i className="fa-solid fa-check" style={{ color: "#FFF" }}></i>
               </div>
-              <span>Əmlak Məşvərətçiləri</span>
+              <span>Əmlakçılar</span>
             </div>
 
             <div className="boxGround">
               <div className="ground">
                 <i className="fa-solid fa-check" style={{ color: "#FFF" }}></i>
               </div>
-              <span>Evin Yoxlanması</span>
+              <span>Yoxlanış</span>
             </div>
 
             <div className="boxGround">
               <div className="ground">
                 <i className="fa-solid fa-check" style={{ color: "#FFF" }}></i>
               </div>
-              <span>Bina Məşvərətçiləri</span>
+              <span>Binaçılar</span>
             </div>
 
             <div className="boxGround">
               <div className="ground">
                 <i className="fa-solid fa-check" style={{ color: "#FFF" }}></i>
               </div>
-              <span>Vastu Məşvərətçiləri</span>
+              <span>Vastuçular</span>
             </div>
           </div>
 
@@ -55,7 +55,7 @@ export default function Estate() {
               <div className="ground">
                 <i className="fa-solid fa-check" style={{ color: "#FFF" }}></i>
               </div>
-              <span>Daxili Dekoratorlar</span>
+              <span>Dekoratorlar</span>
             </div>
 
             <div className="boxGround">
@@ -92,7 +92,7 @@ export default function Estate() {
               <div className="ground">
                 <i className="fa-solid fa-check" style={{ color: "#FFF" }}></i>
               </div>
-              <span>Əmlak Dizaynı</span>
+              <span>Əmlak</span>
             </div>
 
             <div className="boxGround">
