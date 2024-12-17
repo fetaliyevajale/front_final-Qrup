@@ -42,6 +42,12 @@ function App() {
     setIsOpen(!isOpen);
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("role");
+    window.location.href = "/";
+  };
+
   const isLoginPage = location.pathname === "/";
   const isAdminPage = location.pathname.includes("/admin");
 
@@ -118,7 +124,7 @@ function App() {
                 </div>
               </header>
               <i className="fa-solid fa-bars" onClick={toggleSidebar}></i>
-              <button>Sitat əldə edin</button>
+              <button onClick={handleLogout}>Logout</button>
             </div>
           </div>
 
