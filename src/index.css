@@ -860,10 +860,6 @@ header {
 
 }
 
-
-
-
-
 .heroServices {
   width: 100%;
   display: flex;
@@ -2802,3 +2798,182 @@ select {
 
 
 /*backend üçün css hissələri*/
+
+/* Login əsas qutu */
+#login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: #2a2a3c;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  z-index: 1;
+}
+
+#login::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #6d5dfc, #c72ce6, #f7931a);
+  border-radius: 50%;
+  animation: spin 6s linear infinite;
+  z-index: -1;
+}
+
+#login::after {
+  content: '';
+  position: absolute;
+  bottom: -50%;
+  right: -50%;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #f7931a, #c72ce6, #6d5dfc);
+  border-radius: 50%;
+  animation: spin-reverse 6s linear infinite;
+  z-index: -1;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  0% {
+      transform: rotate(360deg);
+  }
+  100% {
+      transform: rotate(0deg);
+  }
+}
+
+/* Əlavə fiqurlar */
+.moving-shape {
+  position: absolute;
+  background: linear-gradient(135deg, #6d5dfc, #c72ce6, #f7931a);
+  opacity: 0.7;
+  border-radius: 50%;
+  animation: move 10s infinite ease-in-out;
+  z-index: 0;
+}
+
+.shape1 {
+  width: 100px;
+  height: 100px;
+  top: 10%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.shape2 {
+  width: 150px;
+  height: 150px;
+  top: 30%;
+  right: 10%;
+  animation-delay: 2s;
+}
+
+.shape3 {
+  width: 80px;
+  height: 80px;
+  bottom: 20%;
+  left: 5%;
+  animation-delay: 4s;
+}
+
+.shape4 {
+  width: 120px;
+  height: 120px;
+  bottom: 10%;
+  right: 15%;
+  animation-delay: 6s;
+}
+
+@keyframes move {
+  0%, 100% {
+      transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  50% {
+      transform: translateY(50px) translateX(50px) rotate(45deg);
+  }
+}
+
+/* Başlıq stili */
+#login h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+/* Form tərzi */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form label {
+  color: #aaa;
+  font-size: 14px;
+}
+
+form input {
+  padding: 10px;
+  background: #1e1e2f;
+  border: 2px solid #3a3a50;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+form input:focus {
+  border-color: #6d5dfc;
+  background: #2a2a3c;
+}
+
+form button {
+  padding: 12px;
+  background: linear-gradient(135deg, #6d5dfc, #c72ce6);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: linear-gradient(135deg, #c72ce6, #6d5dfc);
+  transform: scale(1.05);
+}
+
+/* Kiçik effekt */
+form button:active {
+  transform: scale(0.95);
+}
+
+/* General səhv mesajları */
+.error {
+  color: #ff4f4f;
+  font-size: 12px;
+  margin-top: -10px;
+}
+.same{
+  color: #ffffff;
+}
