@@ -27,7 +27,8 @@ function PrivateRoute({ children, path }) {
   }
 
   if (path.startsWith("/admin") && !isAdmin) {
-    // return <Navigate to="/home" replace />;
+    // Admin səhifələrinə giriş imkanı yox
+    return <Navigate to="/home" replace />;
   }
 
   return children;
@@ -83,22 +84,22 @@ function App() {
             <div className="headers">
               <header>
                 <NavLink style={{ color: "black" }} to="/home">
-                Ana səhifə
+                  Ana səhifə
                 </NavLink>
                 <NavLink style={{ color: "black" }} to="/listing">
-                Siyahı
+                  Siyahı
                 </NavLink>
                 <NavLink style={{ color: "black" }} to="/services">
-                Xidmətlər
+                  Xidmətlər
                 </NavLink>
                 <NavLink style={{ color: "black" }} to="/blog">
-                Bloq
+                  Bloq
                 </NavLink>
                 <NavLink style={{ color: "black" }} to="/about">
-                Haqqında
+                  Haqqında
                 </NavLink>
                 <NavLink style={{ color: "black" }} to="/contact">
-                Bizimlə əlaqə saxlayın
+                  Bizimlə əlaqə saxlayın
                 </NavLink>
 
                 <div className="custom-dropdown">
