@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { Route, NavLink, Routes, useLocation, Navigate } from "react-router-dom";
+import {
+  Route,
+  NavLink,
+  Routes,
+  useLocation,
+  Navigate,
+} from "react-router-dom";
 import Home from "./outline/home/Home";
 import Listing from "./outline/listing/Listing";
 import Services from "./outline/servics/Services";
@@ -16,23 +22,8 @@ import NotFound from "./outline/pages/NotFound";
 import Sidebar from "./Sidebar";
 import Login from "./Admin/Login/Login";
 import Admin from "./Admin/Admin";
-
-// PrivateRoute komponenti
-function PrivateRoute({ children, path }) {
-  const isAuthenticated = localStorage.getItem("token");
-  const isAdmin = localStorage.getItem("role") === "admin";
-
-  if (!isAuthenticated) {
-    return <Navigate to="/" replace />;
-  }
-
-  if (path.startsWith("/admin") && !isAdmin) {
-    // Admin səhifələrinə giriş imkanı yox
-    return <Navigate to="/home" replace />;
-  }
-
-  return children;
-}
+import User from "./Admin/Login/User";
+import Register from "./Admin/Login/Register";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,29 +33,17 @@ function App() {
     setIsOpen(!isOpen);
   };
 
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("role");
-    window.location.href = "/";
-  };
-
-  const isLoginPage = location.pathname === "/";
-  const isAdminPage = location.pathname.includes("/admin");
+  const isLoginPage =
+    location.pathname === "/login" || location.pathname === "/register";
+  const isAdminPage = location.pathname.startsWith("/admin");
 
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route
-          path="/admin/*"
-          element={
-            <PrivateRoute path="/admin/*">
-              <Admin />
-            </PrivateRoute>
-          }
-        />
+        <Route path="/" element={<Home />} />
         {/* Digər marşrutlar */}
-        <Route path="/home" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/listing" element={<Listing />} />
         <Route path="/details/:id" element={<ListingDetails />} />
         <Route path="/services" element={<Services />} />
@@ -76,6 +55,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/help-center" element={<HelpCenter />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/admin/*" element={<Admin />} />
       </Routes>
 
       {/* Sidebar və Fotter */}
@@ -124,7 +104,9 @@ function App() {
                 </div>
               </header>
               <i className="fa-solid fa-bars" onClick={toggleSidebar}></i>
-              <button onClick={handleLogout}>Logout</button>
+
+              {/* user */}
+              <User />
             </div>
           </div>
 

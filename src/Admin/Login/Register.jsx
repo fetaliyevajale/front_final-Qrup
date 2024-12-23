@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-export default function Login() {
+export default function Register() {
   const navigate = useNavigate();
   const [data, setData] = useState({
+    name: "", // Ad sahəsi əlavə edilib
     email: "",
     password: "",
   });
@@ -13,7 +14,7 @@ export default function Login() {
     event.preventDefault();
     setErrors({}); // Əvvəlki səhvləri təmizləyirik
 
-    fetch("http://127.0.0.1:8000/api/user/login", {
+    fetch("http://127.0.0.1:8000/api/user/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -35,11 +36,8 @@ export default function Login() {
       .then((data) => {
         if (data.success) {
           localStorage.setItem("token", data.token);
-          if (data.role === "admin") {
-            navigate("/admin"); // Admin panelinə yönləndir
-          } else {
-            navigate("/"); // İstifadəçi ana səhifəsinə yönləndir
-          }
+
+          navigate("/"); // İstifadəçi ana səhifəsinə yönləndir
         }
       })
       .catch((error) => {
@@ -59,6 +57,20 @@ export default function Login() {
             <span className="same">Zəhmət olmasa, daxil olun</span>
           </div>
           <form onSubmit={handleSubmit}>
+            <label htmlFor="name">Adınız</label>
+            <input
+              onChange={(e) => setData({ ...data, name: e.target.value })}
+              type="text"
+              name="name"
+              id="name"
+              value={data.name}
+            />
+            {errors.name && (
+              <p style={{ color: "red" }}>
+                {Array.isArray(errors.name) ? errors.name[0] : errors.name}
+              </p>
+            )}
+
             <label htmlFor="email">E-poçt ünvanı</label>
             <input
               onChange={(e) => setData({ ...data, email: e.target.value })}
@@ -90,8 +102,7 @@ export default function Login() {
             )}
 
             <button type="submit">Daxil ol</button>
-
-            <Link to="/register">Qeydiyyatdan keç</Link>
+            <Link to="/login">Daxil ol</Link>
           </form>
 
           {errors.general && <p style={{ color: "red" }}>{errors.general}</p>}

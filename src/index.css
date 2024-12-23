@@ -67,14 +67,7 @@ header {
 
 }
 
-.headers a:hover {
-  color: #007bff;
-  /* Hover zamanı rəng dəyişir */
-  transform: scale(1.1);
-  /* Butonun böyüməsi */
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-  /* Şəffaf kölgə əlavə olunur */
-}
+
 .custom-dropdown {
   position: relative;
 }
@@ -98,7 +91,8 @@ header {
 }
 
 .custom-dropdown .dropdown-menu {
-  display: none; /* Başlanğıcda menyu gizlidir */
+  display: none;
+  /* Başlanğıcda menyu gizlidir */
   position: absolute;
   top: 100%;
   left: 0;
@@ -111,7 +105,8 @@ header {
 }
 
 .custom-dropdown:hover .dropdown-menu {
-  display: block; /* Hover zamanı menyu açılır */
+  display: block;
+  /* Hover zamanı menyu açılır */
 }
 
 .custom-dropdown .dropdown-menu li {
@@ -191,21 +186,22 @@ header {
   background-color: #ddd;
 }
 
-.headers>button {
+.login{
   display: flex;
   padding: 4px 24px;
   justify-content: center;
   align-items: center;
   width: max-content;
-  height: 35px;
+  height: 44px !important;
   border-radius: 80px;
   border: none;
   background: blue;
-  color: #fff;
+  color: #fff !important;
   font: normal 600 12px/24px Nunito;
+  
 }
 
-.headers>button:hover {
+.login:hover {
   background-color: darkblue;
   color: #fff;
 }
@@ -248,28 +244,37 @@ header {
   width: 50%;
   flex: 1;
   position: relative;
-  overflow: hidden; /* Şəkilin çərçivədən kənara çıxmasının qarşısını alır */
-  border-radius: 16px; /* Şəkilə yumşaq künclər əlavə edir */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Şəkilə kölgə effekti */
-  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Ümumi animasiya */
+  overflow: hidden;
+  /* Şəkilin çərçivədən kənara çıxmasının qarşısını alır */
+  border-radius: 16px;
+  /* Şəkilə yumşaq künclər əlavə edir */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  /* Şəkilə kölgə effekti */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  /* Ümumi animasiya */
 }
 
 .imgHero>img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.8s ease, filter 0.5s ease; /* Şəkil üçün keçid */
+  transition: transform 0.8s ease, filter 0.5s ease;
+  /* Şəkil üçün keçid */
 }
 
 /* Hover zamanı şəkil hərəkəti */
 .imgHero:hover {
-  transform: scale(1.05); /* Şəkil və çərçivənin böyüməsi */
-  box-shadow: 0px 8px 25px rgba(0, 123, 255, 0.3); /* Hover zamanı kölgənin genişlənməsi */
+  transform: scale(1.05);
+  /* Şəkil və çərçivənin böyüməsi */
+  box-shadow: 0px 8px 25px rgba(0, 123, 255, 0.3);
+  /* Hover zamanı kölgənin genişlənməsi */
 }
 
 .imgHero:hover>img {
-  transform: scale(1.1); /* Şəkilin yüngül böyüməsi */
-  filter: brightness(1.2); /* Daha parlaq görüntü */
+  transform: scale(1.1);
+  /* Şəkilin yüngül böyüməsi */
+  filter: brightness(1.2);
+  /* Daha parlaq görüntü */
 }
 
 /* Parlayan sərhəd effekti */
@@ -281,7 +286,8 @@ header {
   width: 100%;
   height: 100%;
   border-radius: 16px;
-  border: 2px solid transparent; /* Əvvəlcə görünməz sərhəd */
+  border: 2px solid transparent;
+  /* Əvvəlcə görünməz sərhəd */
   background: linear-gradient(45deg, rgba(0, 109, 235, 0.5), rgba(255, 255, 255, 0.1));
   background-size: 200% 200%;
   z-index: 1;
@@ -290,9 +296,12 @@ header {
 }
 
 .imgHero:hover::before {
-  opacity: 1; /* Hover zamanı sərhəd görünür */
-  transform: scale(1.05); /* Sərhəd böyüyür */
-  background-position: 100% 50%; /* Gradient hərəkəti */
+  opacity: 1;
+  /* Hover zamanı sərhəd görünür */
+  transform: scale(1.05);
+  /* Sərhəd böyüyür */
+  background-position: 100% 50%;
+  /* Gradient hərəkəti */
 }
 
 /* Yumşaq parıltı */
@@ -307,7 +316,8 @@ header {
 
 .imgHero:hover::after {
   opacity: 1;
-  transform: scale(1.2); /* Hover zamanı parlaq dairənin genişlənməsi */
+  transform: scale(1.2);
+  /* Hover zamanı parlaq dairənin genişlənməsi */
 }
 
 
@@ -411,11 +421,13 @@ header {
   gap: 16px;
   padding: 30px 72px;
 }
+
 .cols {
   width: 25%;
   position: relative;
   cursor: pointer;
-  overflow: hidden; /* Şəkil xaricə çıxmasın */
+  overflow: hidden;
+  /* Şəkil xaricə çıxmasın */
   border-radius: 16px;
 }
 
@@ -423,65 +435,8 @@ header {
   border-radius: 16px;
   object-fit: cover;
   width: 100%;
-  transition: transform 0.8s ease-in-out, filter 0.8s ease-in-out; /* Effekt keçidləri */
-}
-
-.cols:hover>img {
-  transform: scale(1.2) translateY(-10px); /* Şəkil böyüyür və yuxarı hərəkət edir */
-  filter: brightness(1.2) saturate(1.5); /* Parlaqlıq və rəng doyumu artır */
-}
-
-/* Parıltı effekti */
-.cols::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(
-    from 0deg,
-    rgba(66, 122, 243, 0.5),
-    rgba(248, 42, 6, 0.5),
-    rgba(0, 255, 21, 0.5),
-    rgba(255, 0, 0, 0.5)
-  );
-  transform: rotate(0deg);
-  border-radius: 50%;
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.cols:hover::before {
-  opacity: 1;
-  transform: rotate(360deg); /* Hover zamanı dönərək parlayan effekt */
-}
-
-/* Çərçivə açılma effekti */
-.cols::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 3px solid transparent;
-  border-image: linear-gradient(
-    to right,
-    rgba(247, 178, 218, 0.7),
-    rgba(185, 253, 253, 0.7)
-  );
-  border-image-slice: 1;
-  opacity: 0;
-  transform: scale(0.9);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.cols:hover::after {
-  opacity: 1;
-  transform: scale(1); /* Hover zamanı çərçivə tam açılır */
-  z-index: 2;
+  transition: transform 0.8s ease-in-out, filter 0.8s ease-in-out;
+  /* Effekt keçidləri */
 }
 
 
@@ -565,20 +520,26 @@ header {
   width: 100%;
   height: auto;
   object-fit: cover;
-  transition: transform 0.8s ease, filter 0.5s ease; /* Şəkilin animasiyası */
+  transition: transform 0.8s ease, filter 0.5s ease;
+  /* Şəkilin animasiyası */
 }
 
 /* Hover zamanı şəkil hərəkəti */
 .col:hover>img {
-  transform: scale(1.1) rotate(2deg); /* Şəkilin böyüməsi və fırlanması */
-  filter: brightness(1.2) contrast(1.1); /* Parlaqlıq və kontrast artır */
+  transform: scale(1.1) rotate(2deg);
+  /* Şəkilin böyüməsi və fırlanması */
+  filter: brightness(1.2) contrast(1.1);
+  /* Parlaqlıq və kontrast artır */
 }
 
 
 .col:hover::before {
-  opacity: 1; /* Hover zamanı sərhəd görünür */
-  transform: scale(1.1); /* Sərhəd böyüyür */
-  mix-blend-mode: overlay; /* Şəkillə mükəmməl uyğunluq */
+  opacity: 1;
+  /* Hover zamanı sərhəd görünür */
+  transform: scale(1.1);
+  /* Sərhəd böyüyür */
+  mix-blend-mode: overlay;
+  /* Şəkillə mükəmməl uyğunluq */
 }
 
 /* Şəffaf parıltı effekti */
@@ -596,8 +557,10 @@ header {
 }
 
 .col:hover::after {
-  transform: translate(-50%, -50%) scale(3); /* Parıltının genişlənməsi */
-  opacity: 0; /* Parıltının sönməsi */
+  transform: translate(-50%, -50%) scale(3);
+  /* Parıltının genişlənməsi */
+  opacity: 0;
+  /* Parıltının sönməsi */
 }
 
 
@@ -1271,14 +1234,18 @@ p {
   font: normal 700 24px/40px Nunito;
   background: #222430;
   position: relative;
-  overflow: hidden; /* İstənməyən kənar effekti gizlətmək üçün */
-  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Hover keçidi */
+  overflow: hidden;
+  /* İstənməyən kənar effekti gizlətmək üçün */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  /* Hover keçidi */
 }
 
 /* Hover effekti */
 .data>.backGround:hover {
-  transform: scale(1.2) rotate(360deg); /* Element böyüyür və tam dövr edir */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Kölgə effekti əlavə olunur */
+  transform: scale(1.2) rotate(360deg);
+  /* Element böyüyür və tam dövr edir */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  /* Kölgə effekti əlavə olunur */
 }
 
 /* Daxili parıltı effekti */
@@ -1293,12 +1260,15 @@ p {
   transform: translate(-50%, -50%) scale(0);
   border-radius: 50%;
   opacity: 0;
-  transition: transform 0.6s ease, opacity 0.6s ease; /* Animasiya keçidi */
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  /* Animasiya keçidi */
 }
 
 .data>.backGround:hover::before {
-  transform: translate(-50%, -50%) scale(1); /* Parıltının genişlənməsi */
-  opacity: 1; /* Parıltı görünür */
+  transform: translate(-50%, -50%) scale(1);
+  /* Parıltının genişlənməsi */
+  opacity: 1;
+  /* Parıltı görünür */
 }
 
 /* Gradient sərhəd effekti */
@@ -1314,12 +1284,15 @@ p {
   z-index: -1;
   opacity: 0;
   transform: scale(0.9);
-  transition: opacity 0.8s ease, transform 0.8s ease; /* Gradient sərhəd animasiyası */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  /* Gradient sərhəd animasiyası */
 }
 
 .data>.backGround:hover::after {
-  opacity: 1; /* Hover zamanı gradient sərhəd görünür */
-  transform: scale(1.2); /* Gradient sərhəd genişlənir */
+  opacity: 1;
+  /* Hover zamanı gradient sərhəd görünür */
+  transform: scale(1.2);
+  /* Gradient sərhəd genişlənir */
 }
 
 
@@ -1483,9 +1456,12 @@ footer {
   object-fit: contain;
   height: auto;
 }
+
 .chooseRight:hover>img {
-  transform: scale(1.05); /* Resmi biraz büyüt */
-  filter: brightness(1.1) saturate(1.5); /* Parlaklık ve doyumu artır */
+  transform: scale(1.05);
+  /* Resmi biraz büyüt */
+  filter: brightness(1.1) saturate(1.5);
+  /* Parlaklık ve doyumu artır */
   transition: transform 1.0s ease, filter 0.2s ease;
 }
 
@@ -2192,7 +2168,7 @@ select {
   display: flex;
   align-items: center;
   gap: 7px;
- 
+
 }
 
 
@@ -2842,19 +2818,21 @@ select {
 
 @keyframes spin {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
+
   100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @keyframes spin-reverse {
   0% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
+
   100% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
 
@@ -2901,11 +2879,14 @@ select {
 }
 
 @keyframes move {
-  0%, 100% {
-      transform: translateY(0) translateX(0) rotate(0deg);
+
+  0%,
+  100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
   }
+
   50% {
-      transform: translateY(50px) translateX(50px) rotate(45deg);
+    transform: translateY(50px) translateX(50px) rotate(45deg);
   }
 }
 
@@ -2974,6 +2955,792 @@ form button:active {
   font-size: 12px;
   margin-top: -10px;
 }
-.same{
+
+.same {
   color: #ffffff;
+}
+
+/* backende dashboard üçün css stli-----------------*/
+
+/* Admin Dashboard */
+#adminDashboard {
+  width: 250px;
+  height: 100vh;
+  background-color: #2c3e50;
+  padding: 30px;
+  color: #ecf0f1;
+  font-size: 1.1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 3px 0px 15px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#adminDashboard h2 {
+  margin-bottom: 30px;
+  font-size: 1.5em;
+  text-align: center;
+  animation: fadeInDown 0.5s ease-out;
+}
+
+/* Menu */
+.dashboard-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  color: #ecf0f1;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #34495e;
+  transition: all 0.3s ease;
+  animation: slideInLeft 0.5s ease-out;
+}
+
+.dashboard-link:hover {
+  background-color: #16a085;
+  color: #ecf0f1;
+}
+
+.dashboard-link.active {
+  background-color: #27ae60;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scroll Animations */
+#adminDashboard {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.dashboard-link {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: scrollIn 0.5s ease forwards;
+}
+
+@keyframes scrollIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover Animation */
+
+.dashboard-link:hover {
+  background-color: #1abc9c;
+  color: #ecf0f1;
+  transform: scale(1.05);
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+/* Products  hissəsinin stylı*/
+/*products form */
+.product-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  /* Açıq ağ fon */
+  border: 1px solid #e0e0e0;
+  /* Açıq boz sərhəd */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  font-family: Arial, sans-serif;
+}
+
+.product-form h2 {
+  text-align: center;
+  color: #555;
+  /* Açıq boz başlıq */
+  margin-bottom: 20px;
+}
+
+.product-form .form-group {
+  margin-bottom: 15px;
+}
+
+.product-form .form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #666;
+  /* Daha açıq rəngli mətn */
+}
+
+.product-form .form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  outline: none;
+  background-color: #f9f9f9;
+  /* Açıq boz fon */
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.product-form .form-group input:focus {
+  border-color: #80d4ff;
+  /* Açıq mavi sərhəd */
+  background-color: #e8f8ff;
+  /* Açıq mavi fon */
+}
+
+.product-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  /* Açıq yaşıl düymə */
+  color: white;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.product-form button:hover {
+  background-color: #45a049;
+  /* Daha tünd yaşıl */
+  transform: scale(1.03);
+  /* Kiçik böyümə effekti */
+}
+
+.product-form p {
+  text-align: center;
+  color: #e57373;
+  /* Açıq qırmızı xəta mesajı */
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+/*products list*/
+/* Ümumi stil */
+.product-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Məhsul adları */
+.product-name {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Məhsul detalları */
+.product-address,
+.product-price,
+.product-size,
+.product-bedrooms,
+.product-bathrooms {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Düymələr üçün stil */
+.product-edit-button,
+.product-delete-button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.product-edit-button {
+  background-color: #4caf50;
+  color: white;
+  margin-right: 10px;
+}
+
+.product-edit-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.product-delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.product-delete-button:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
+
+/* uptade products*/
+
+.update-product-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.update-product-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.update-product-container input {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.update-product-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.update-product-container button:hover {
+  background-color: #0056b3;
+}
+
+/* blogs style */
+/*Blogs Form*/
+.adminHero {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.adminHero h2 {
+  text-align: center;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.adminHero p {
+  text-align: center;
+  color: #28a745;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.adminHero form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.adminHero label {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 5px;
+}
+
+.adminHero input,
+.adminHero textarea,
+.adminHero select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  background-color: #f8f9fa;
+}
+
+.adminHero input:focus,
+.adminHero textarea:focus,
+.adminHero select:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.3);
+  background-color: #ffffff;
+}
+
+.adminHero button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.adminHero button:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+.adminHero textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.adminHero select {
+  background-color: #f8f9fa;
+}
+
+.adminHero button:active {
+  background-color: #004085;
+}
+
+.adminHero {
+  font-family: Arial, sans-serif;
+}
+
+/*blog list*/
+.adminHero {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  font-family: Arial, sans-serif;
+}
+
+.adminHero h2 {
+  text-align: center;
+  color: #333333;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.adminHero a button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.adminHero a button:hover {
+  background-color: #218838;
+}
+
+.adminHero table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.adminHero table th,
+.adminHero table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.adminHero table th {
+  background-color: #f8f9fa;
+  color: #495057;
+  font-weight: bold;
+}
+
+.adminHero table td img {
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.adminHero table td button {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.adminHero table td button:hover {
+  transform: scale(1.05);
+}
+
+.adminHero table td button:nth-child(1) {
+  background-color: #007bff;
+}
+
+.adminHero table td button:nth-child(1):hover {
+  background-color: #0056b3;
+}
+
+.adminHero table td button:nth-child(2) {
+  background-color: #dc3545;
+}
+
+.adminHero table td button:nth-child(2):hover {
+  background-color: #c82333;
+}
+
+/* updateBlog css*/
+.adminHero {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 60%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.adminHero h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.adminHero p {
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+.adminHero form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.adminHero label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.adminHero input[type="text"],
+.adminHero textarea,
+.adminHero input[type="file"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.adminHero input[type="file"] {
+  padding: 0;
+}
+
+.adminHero button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.adminHero button:hover {
+  background-color: #2980b9;
+}
+
+.adminHero .error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  text-align: left;
+}
+
+/*Our Team Curd style */
+/*Team Form css*/
+.teamhome {
+  padding: 30px;
+  background-color: #f9f9f9;
+  /* Açık gri arka plan */
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  /* Hafif gölgeleme */
+  width: 50%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.teamhome h1 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #333;
+  /* Koyu gri başlık rengi */
+}
+
+.teamhome form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.teamhome input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  /* Açık gri kenar çerçevesi */
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #fff;
+  /* Beyaz arka plan */
+}
+
+.teamhome input:focus {
+  border-color: #3498db;
+  /* Odaklandığında mavi kenar rengi */
+  outline: none;
+}
+
+.teamhome button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  /* Mavi düğme rengi */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.teamhome button:hover {
+  background-color: #0056b3;
+  /* Mavi üzerine geçiş rengi */
+}
+
+.teamhome .error-message {
+  color: #dc3545;
+  /* Kırmızı hata mesajı rengi */
+  font-size: 14px;
+  text-align: left;
+}
+
+/*Team List css*/
+.teamList {
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  width: 70%;
+  margin: 20px auto;
+}
+
+.teamList h1 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  color: #333;
+}
+
+.teamList table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.teamList table th,
+.teamList table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.teamList table th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.teamList table td a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.teamList table td a:hover {
+  text-decoration: underline;
+}
+
+.teamList table td button {
+  padding: 6px 12px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.teamList table td button:hover {
+  background-color: #c82333;
+}
+
+.teamList .actions {
+  display: flex;
+  gap: 10px;
+}
+
+/*Update Team css*/
+
+.adminHero {
+  padding: 30px;
+  background-color: #f0f4f7;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  width: 60%;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.adminHero form {
+  display: flex;
+  flex-direction: column;
+}
+
+.adminHero label {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.adminHero input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+.adminHero input:focus {
+  border-color: #007bff;
+}
+
+.adminHero button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+}
+
+.adminHero button:hover {
+  background-color: #218838;
+}
+
+
+/* USER DROPDOÜN */
+
+.user-dropdown {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 0.5px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.inner-dropdown {
+  position: absolute;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  top: 120%;
+  left: 0;
+  transform: translateX(-50%);
+  z-index: 999;
+  width: max-content;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  box-shadow: #000;
+}
+
+.inner-dropdown:hover{
+  background-color: #0056b3;
+  color: white;
+  cursor: pointer;
+}
+
+.user-dropdown:hover .inner-dropdown {
+  opacity: 1;
+  visibility: visible;
 }

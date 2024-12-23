@@ -73,7 +73,7 @@ const UpdateProduct = ({ productId }) => {
     };
 
     return (
-        <div>
+        <div className="update-product-container">
             <h2>Məhsul Yeniləmə</h2>
             {loading && <p>Yüklənir...</p>}
             {error && <p style={{ color: 'red' }}>{error}</p>}

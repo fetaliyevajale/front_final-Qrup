@@ -2,17 +2,17 @@ import React from 'react';
 
 const ProductList = ({ products, onEdit, onDelete }) => {
     return (
-        <ul>
+        <ul className="product-list">
             {products.map(product => (
-                <li key={product.id}>
-                    <h3>{product.name}</h3>
-                    <p>Address: {product.address}</p>
-                    <p>Price: {product.price}</p>
-                    <p>Size: {product.size}</p>
-                    <p>Bedrooms: {product.bedrooms}</p>
-                    <p>Bathrooms: {product.bathrooms}</p>
-                    <button onClick={() => onEdit(product)}>Redaktə et</button>
-                    <button onClick={() => onDelete(product.id)}>Sil</button>
+                <li className="product-item" key={product.id}>
+                    <h3 className="product-name">{product.name}</h3>
+                    <p className="product-address">Address: {product.address}</p>
+                    <p className="product-price">Price: {product.price}</p>
+                    <p className="product-size">Size: {product.size}</p>
+                    <p className="product-bedrooms">Bedrooms: {product.bedrooms}</p>
+                    <p className="product-bathrooms">Bathrooms: {product.bathrooms}</p>
+                    <button className="product-edit-button" onClick={() => onEdit(product)}>Redaktə et</button>
+                    <button className="product-delete-button" onClick={() => onDelete(product.id)}>Sil</button>
                 </li>
             ))}
         </ul>
